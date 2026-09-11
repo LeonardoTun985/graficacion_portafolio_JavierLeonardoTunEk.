@@ -415,3 +415,750 @@
 </body>
 </html>
 ```
+
+```css
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #080b18;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   FONDO
+========================= */
+
+.fondo {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.circulo {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.18;
+}
+
+.circulo-1 {
+    width: 400px;
+    height: 400px;
+    background: #6c5ce7;
+    top: 5%;
+    left: -150px;
+}
+
+.circulo-2 {
+    width: 350px;
+    height: 350px;
+    background: #00cec9;
+    right: -100px;
+    top: 35%;
+}
+
+.circulo-3 {
+    width: 300px;
+    height: 300px;
+    background: #a29bfe;
+    bottom: -100px;
+    left: 40%;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    height: 75px;
+    padding: 0 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(8, 11, 24, 0.85);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #6c5ce7;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: #aeb4ca;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 720px;
+    padding: 100px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.hero-contenido {
+    max-width: 700px;
+}
+
+.etiqueta,
+.subtitulo,
+.tipo {
+    color: #8c7cff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin: 15px 0;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(50px, 7vw, 90px);
+    line-height: 1.05;
+}
+
+.hero h1 span {
+    display: block;
+
+    background: linear-gradient(
+        90deg,
+        #8c7cff,
+        #00cec9
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.descripcion {
+    max-width: 600px;
+    margin: 25px 0;
+
+    color: #aeb4ca;
+    font-size: 17px;
+}
+
+
+/* =========================
+   DATOS
+========================= */
+
+.datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 35px 0;
+}
+
+.dato {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+
+.dato > span {
+    font-size: 20px;
+}
+
+.dato small {
+    display: block;
+    color: #72798f;
+    font-size: 10px;
+}
+
+.dato strong {
+    font-size: 12px;
+}
+
+
+/* =========================
+   BOTÓN PRINCIPAL
+========================= */
+
+.btn-principal {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 25px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #6c5ce7,
+        #4834d4
+    );
+
+    font-weight: 600;
+
+    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.25);
+
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   GRÁFICO HERO
+========================= */
+
+.hero-grafico {
+    width: 350px;
+    height: 350px;
+
+    display: grid;
+    place-items: center;
+}
+
+.grafico-circulo {
+    position: relative;
+
+    width: 270px;
+    height: 270px;
+
+    border: 1px solid rgba(140, 124, 255, 0.4);
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    animation: flotar 5s ease-in-out infinite;
+}
+
+.centro {
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #6c5ce7,
+        #00cec9
+    );
+
+    box-shadow:
+        0 0 50px rgba(108, 92, 231, 0.5);
+}
+
+.centro span {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.orbita {
+    position: absolute;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+}
+
+.orbita-1 {
+    width: 330px;
+    height: 150px;
+    transform: rotate(30deg);
+}
+
+.orbita-2 {
+    width: 330px;
+    height: 150px;
+    transform: rotate(-30deg);
+}
+
+@keyframes flotar {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+main {
+    padding: 30px 8%;
+}
+
+.unidad-seccion {
+    padding: 100px 0;
+}
+
+.titulo-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    gap: 50px;
+
+    margin-bottom: 50px;
+}
+
+.titulo-seccion > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.numero {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    color: #6c5ce7;
+    opacity: 0.8;
+}
+
+.titulo-seccion h2 {
+    max-width: 650px;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+    line-height: 1.3;
+}
+
+.titulo-seccion p {
+    max-width: 400px;
+    color: #7f879e;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.grid-actividades {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+.tarjeta-actividad {
+    position: relative;
+
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+.tarjeta-actividad::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 3px;
+
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(
+        90deg,
+        #6c5ce7,
+        #00cec9
+    );
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: 0.4s;
+}
+
+.tarjeta-actividad:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(140, 124, 255, 0.4);
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.tarjeta-actividad:hover::before {
+    transform: scaleX(1);
+}
+
+.numero-tarjeta {
+    position: absolute;
+
+    right: 25px;
+    top: 20px;
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 45px;
+
+    color: rgba(255,255,255,0.04);
+}
+
+.icono {
+    width: 50px;
+    height: 50px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    background: rgba(108, 92, 231, 0.15);
+
+    color: #9b8cff;
+
+    font-size: 22px;
+}
+
+.tarjeta-actividad h3 {
+    margin-top: 10px;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+}
+
+.tarjeta-actividad h4 {
+    margin: 5px 0 15px;
+
+    color: #9b8cff;
+
+    font-size: 14px;
+}
+
+.tarjeta-actividad p {
+    min-height: 100px;
+
+    color: #8f96aa;
+
+    font-size: 14px;
+}
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin: 20px 0;
+}
+
+.tecnologias span {
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    background: rgba(255,255,255,0.05);
+
+    color: #9ba2b8;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   BOTONES TARJETAS
+========================= */
+
+.btn-enlace {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 15px;
+
+    border: 1px solid rgba(140,124,255,0.25);
+    border-radius: 9px;
+
+    color: #b8b0ff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn-enlace:hover {
+    background: #6c5ce7;
+    color: white;
+
+    border-color: #6c5ce7;
+}
+
+
+/* =========================
+   TECNOLOGÍAS
+========================= */
+
+.tecnologias-seccion {
+    padding: 100px 0;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.tecnologias-seccion h2 {
+    margin: 10px 0 40px;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+}
+
+.herramientas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.herramienta {
+    width: 130px;
+
+    padding: 20px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.03);
+
+    transition: 0.3s;
+}
+
+.herramienta:hover {
+    transform: translateY(-5px);
+    border-color: #6c5ce7;
+}
+
+.herramienta span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+
+    color: #8c7cff;
+}
+
+.herramienta p {
+    color: #8f96aa;
+    font-size: 12px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 50px 8% 25px;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    background: rgba(0,0,0,0.15);
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.footer-contenido p {
+    margin-top: 10px;
+
+    max-width: 400px;
+
+    color: #72798f;
+    font-size: 13px;
+}
+
+.footer-derecha {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-derecha a {
+    color: #9b8cff;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.footer-derecha a:hover {
+    color: white;
+}
+
+.copyright {
+    margin-top: 40px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.06);
+
+    text-align: center;
+
+    color: #565d72;
+    font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 80px 7%;
+        text-align: center;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .datos {
+        justify-content: center;
+    }
+
+    .hero-grafico {
+        transform: scale(0.8);
+    }
+
+    .titulo-seccion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .titulo-seccion > div {
+        align-items: flex-start;
+    }
+
+    .numero {
+        font-size: 35px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 25px;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .dato {
+        width: 100%;
+        text-align: left;
+    }
+
+    .tarjeta-actividad {
+        padding: 25px;
+    }
+
+    .grafico-circulo {
+        transform: scale(0.8);
+    }
+}
+```
+
