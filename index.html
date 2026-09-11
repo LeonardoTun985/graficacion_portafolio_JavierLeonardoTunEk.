@@ -1,68 +1,418 @@
+
+```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graficación | ISC</title>
+
+    <title>Portafolio | Graficación | Javier Leonardo</title>
+
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header>
-        <h1>Portafolio web de Prácticas - Graficación</h1>
-        <p><strong>Alumno:</strong> [JavierLeonardoTunEk] | <strong>Matrícula:</strong> [251K0052]</p>
-        <p>Ingeniería en Sistemas Computacionales - 3er Semestre</p>
+    <!-- Fondo decorativo -->
+    <div class="fondo">
+        <div class="circulo circulo-1"></div>
+        <div class="circulo circulo-2"></div>
+        <div class="circulo circulo-3"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>&lt;/&gt;</span> JL
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#unidad1">Unidad 1</a>
+            <a href="#unidad2">Unidad 2</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
     </header>
 
+
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+
+        <div class="hero-contenido">
+
+            <p class="etiqueta">PORTAFOLIO ACADÉMICO</p>
+
+            <h1>
+                Graficación
+                <span>Digital</span>
+            </h1>
+
+            <p class="descripcion">
+                Portafolio web de prácticas y proyectos realizados
+                durante la asignatura de Graficación.
+            </p>
+
+            <div class="datos">
+
+                <div class="dato">
+                    <span>👨‍💻</span>
+                    <div>
+                        <small>Alumno</small>
+                        <strong>Javier Leonardo Tun Ek</strong>
+                    </div>
+                </div>
+
+                <div class="dato">
+                    <span>🎓</span>
+                    <div>
+                        <small>Matrícula</small>
+                        <strong>251K0052</strong>
+                    </div>
+                </div>
+
+                <div class="dato">
+                    <span>💻</span>
+                    <div>
+                        <small>Carrera</small>
+                        <strong>Ingeniería en Sistemas Computacionales</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="#unidad1" class="btn-principal">
+                Explorar proyectos
+                <span>↓</span>
+            </a>
+
+        </div>
+
+        <div class="hero-grafico">
+
+            <div class="grafico-circulo">
+                <div class="orbita orbita-1"></div>
+                <div class="orbita orbita-2"></div>
+                <div class="centro">
+                    <span>p5.js</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTENIDO -->
     <main>
-        <section class="unidad-seccion">
-            <h2>Unidad 1: Introducción a los ambientes de graficación</h2>
-            <div class="grid-actividades">
-                
-                <div class="tarjeta-actividad">
-                    <h3>Actividad 1.1: Primitivas</h3>
-                    <p>Modelado geométrico estático de un logotipo institucional mediante primitivas bidimensionales aplicadas en p5.js.</p>
-                    <a href="https://editor.p5js.org/LeonardoTun985/sketches/HAfGNs8g7" target="_blank" class="btn-enlace">Ver Proyecto 2D</a>
+
+        <!-- UNIDAD 1 -->
+        <section id="unidad1" class="unidad-seccion">
+
+            <div class="titulo-seccion">
+
+                <div>
+                    <span class="numero">01</span>
+                    <h2>Introducción a los ambientes de graficación</h2>
                 </div>
 
-                <div class="tarjeta-actividad">
-                    <h3>Actividad 1.2: Colores</h3>
-                    <p>Aplicación de los formatos para uso de colores en el lienzo.</p>
-                    <a href="https://editor.p5js.org/LeonardoTun985/sketches/-buNTDf48" target="_blank" class="btn-enlace">Ver Proyecto </a>
-                </div>
-
-
-                   <div class="tarjeta-actividad">
-                    <h3>Actividad 1.3: Arte digital</h3>
-                    <p>Explicar la importancia del diseño de aplicaciones gráficas.</p>
-                    <a href="https://editor.p5js.org/LeonardoTun985/sketches/YxiLfIN3p" target="_blank" class="btn-enlace">Ver Proyecto</a>
-                </div>
-
-
+                <p>
+                    Primeros conceptos de graficación, primitivas,
+                    colores y arte digital utilizando p5.js.
+                </p>
 
             </div>
+
+
+            <div class="grid-actividades">
+
+                <!-- ACTIVIDAD 1.1 -->
+                <article class="tarjeta-actividad">
+
+                    <div class="numero-tarjeta">01</div>
+
+                    <div class="icono">◆</div>
+
+                    <span class="tipo">PRIMITIVAS 2D</span>
+
+                    <h3>Actividad 1.1</h3>
+
+                    <h4>Primitivas geométricas</h4>
+
+                    <p>
+                        Modelado geométrico estático de un logotipo
+                        institucional mediante primitivas bidimensionales
+                        aplicadas en p5.js.
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>p5.js</span>
+                        <span>2D</span>
+                        <span>Primitivas</span>
+                    </div>
+
+                    <a href="https://editor.p5js.org/LeonardoTun985/sketches/HAfGNs8g7"
+                       target="_blank"
+                       class="btn-enlace">
+                        Ver proyecto
+                        <span>↗</span>
+                    </a>
+
+                </article>
+
+
+                <!-- ACTIVIDAD 1.2 -->
+                <article class="tarjeta-actividad">
+
+                    <div class="numero-tarjeta">02</div>
+
+                    <div class="icono">●</div>
+
+                    <span class="tipo">COLOR</span>
+
+                    <h3>Actividad 1.2</h3>
+
+                    <h4>Aplicación de colores</h4>
+
+                    <p>
+                        Aplicación de diferentes formatos y métodos
+                        para utilizar colores dentro del lienzo
+                        de p5.js.
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>p5.js</span>
+                        <span>RGB</span>
+                        <span>Color</span>
+                    </div>
+
+                    <a href="https://editor.p5js.org/LeonardoTun985/sketches/-buNTDf48"
+                       target="_blank"
+                       class="btn-enlace">
+                        Ver proyecto
+                        <span>↗</span>
+                    </a>
+
+                </article>
+
+
+                <!-- ACTIVIDAD 1.3 -->
+                <article class="tarjeta-actividad">
+
+                    <div class="numero-tarjeta">03</div>
+
+                    <div class="icono">✦</div>
+
+                    <span class="tipo">ARTE DIGITAL</span>
+
+                    <h3>Actividad 1.3</h3>
+
+                    <h4>Arte digital</h4>
+
+                    <p>
+                        Exploración de la importancia del diseño
+                        y la creatividad en el desarrollo de
+                        aplicaciones gráficas.
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>p5.js</span>
+                        <span>Arte</span>
+                        <span>Diseño</span>
+                    </div>
+
+                    <a href="https://editor.p5js.org/LeonardoTun985/sketches/YxiLfIN3p"
+                       target="_blank"
+                       class="btn-enlace">
+                        Ver proyecto
+                        <span>↗</span>
+                    </a>
+
+                </article>
+
+            </div>
+
         </section>
 
-        <section class="unidad-seccion">
-            <h2>Unidad 2: Graficación 2D</h2>
-            <div class="grid-actividades">
-                
-                <div class="tarjeta-actividad">
-                    <h3>Actividad 2.1: Traslación</h3>
-                    <p>Implementación de transformaciones lineales (traslación y rotación) aislando la matriz gráfica mediante push() y pop().</p>
-                    <a href="#" target="_blank" class="btn-enlace">Ver Proyecto</a>
+
+        <!-- UNIDAD 2 -->
+        <section id="unidad2" class="unidad-seccion unidad-dos">
+
+            <div class="titulo-seccion">
+
+                <div>
+                    <span class="numero">02</span>
+                    <h2>Graficación 2D</h2>
                 </div>
 
-                <div class="tarjeta-actividad">
-                    <h3>Actividad 2.2: Mini-Proyecto </h3>
-                    <p>Replica de un videojuego clásico aplicando Programación Orientada a Objetos, lógica de colisiones y vectores.</p>
-                    <a href="#" target="_blank" class="btn-enlace">Jugar Ahora</a>
+                <p>
+                    Transformaciones, movimiento, programación orientada
+                    a objetos y desarrollo de proyectos interactivos.
+                </p>
+
+            </div>
+
+
+            <div class="grid-actividades">
+
+                <!-- ACTIVIDAD 2.1 -->
+                <article class="tarjeta-actividad">
+
+                    <div class="numero-tarjeta">04</div>
+
+                    <div class="icono">↻</div>
+
+                    <span class="tipo">TRANSFORMACIONES</span>
+
+                    <h3>Actividad 2.1</h3>
+
+                    <h4>Traslación y rotación</h4>
+
+                    <p>
+                        Implementación de transformaciones lineales
+                        mediante traslación y rotación utilizando
+                        push() y pop().
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>p5.js</span>
+                        <span>2D</span>
+                        <span>Transformaciones</span>
+                    </div>
+
+                    <a href="#"
+                       class="btn-enlace">
+                        Próximamente
+                        <span>→</span>
+                    </a>
+
+                </article>
+
+
+                <!-- ACTIVIDAD 2.2 -->
+                <article class="tarjeta-actividad destacada">
+
+                    <div class="numero-tarjeta">05</div>
+
+                    <div class="icono">▶</div>
+
+                    <span class="tipo">MINI-PROYECTO</span>
+
+                    <h3>Actividad 2.2</h3>
+
+                    <h4>Videojuego clásico</h4>
+
+                    <p>
+                        Réplica de un videojuego clásico aplicando
+                        Programación Orientada a Objetos, lógica de
+                        colisiones y vectores.
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>p5.js</span>
+                        <span>POO</span>
+                        <span>Vectores</span>
+                    </div>
+
+                    <a href="#"
+                       class="btn-enlace">
+                        Próximamente
+                        <span>→</span>
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECNOLOGÍAS -->
+        <section class="tecnologias-seccion">
+
+            <span class="subtitulo">HERRAMIENTAS</span>
+
+            <h2>Tecnologías utilizadas</h2>
+
+            <div class="herramientas">
+
+                <div class="herramienta">
+                    <span>JS</span>
+                    <p>JavaScript</p>
+                </div>
+
+                <div class="herramienta">
+                    <span>p5</span>
+                    <p>p5.js</p>
+                </div>
+
+                <div class="herramienta">
+                    <span>HTML</span>
+                    <p>HTML5</p>
+                </div>
+
+                <div class="herramienta">
+                    <span>CSS</span>
+                    <p>CSS3</p>
+                </div>
+
+                <div class="herramienta">
+                    <span>Git</span>
+                    <p>GitHub</p>
                 </div>
 
             </div>
+
         </section>
 
-        </main>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+
+        <div class="footer-contenido">
+
+            <div>
+                <div class="logo">
+                    <span>&lt;/&gt;</span> JL
+                </div>
+
+                <p>
+                    Portafolio académico de Graficación.
+                    Ingeniería en Sistemas Computacionales.
+                </p>
+            </div>
+
+            <div class="footer-derecha">
+
+                <a href="https://github.com/"
+                   target="_blank">
+                    GitHub ↗
+                </a>
+
+                <a href="https://editor.p5js.org/LeonardoTun985/"
+                   target="_blank">
+                    p5.js ↗
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Javier Leonardo Tun Ek · Todos los proyectos académicos.
+        </div>
+
+    </footer>
 
 </body>
 </html>
+```
