@@ -1,4 +1,5 @@
 
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,26 +7,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portafolio | Graficación | Javier Leonardo</title>
+    <title>Portafolio | Graficación</title>
 
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Fuente -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Fondo decorativo -->
-    <div class="fondo">
-        <div class="circulo circulo-1"></div>
-        <div class="circulo circulo-2"></div>
-        <div class="circulo circulo-3"></div>
-    </div>
+    <!-- ================= NAVBAR ================= -->
 
-    <!-- NAVBAR -->
     <header class="navbar">
 
         <div class="logo">
@@ -36,72 +26,74 @@
             <a href="#inicio">Inicio</a>
             <a href="#unidad1">Unidad 1</a>
             <a href="#unidad2">Unidad 2</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#sobre-mi">Sobre mí</a>
         </nav>
+
+        <a href="https://github.com/" target="_blank" class="github-btn">
+            GitHub ↗
+        </a>
 
     </header>
 
 
-    <!-- INICIO -->
+    <!-- ================= INICIO ================= -->
+
     <section id="inicio" class="hero">
 
-        <div class="hero-contenido">
+        <div class="hero-text">
 
-            <p class="etiqueta">PORTAFOLIO ACADÉMICO</p>
+            <p class="mini-title">
+                PORTAFOLIO ACADÉMICO
+            </p>
 
             <h1>
                 Graficación
                 <span>Digital</span>
             </h1>
 
-            <p class="descripcion">
-                Portafolio web de prácticas y proyectos realizados
+            <p class="description">
+                Bienvenido a mi portafolio web. Aquí encontrarás
+                mis prácticas, proyectos y actividades realizadas
                 durante la asignatura de Graficación.
             </p>
 
-            <div class="datos">
+            <div class="student-info">
 
-                <div class="dato">
-                    <span>👨‍💻</span>
-                    <div>
-                        <small>Alumno</small>
-                        <strong>Javier Leonardo Tun Ek</strong>
-                    </div>
+                <div>
+                    <small>ALUMNO</small>
+                    <strong>Javier Leonardo Tun Ek</strong>
                 </div>
 
-                <div class="dato">
-                    <span>🎓</span>
-                    <div>
-                        <small>Matrícula</small>
-                        <strong>251K0052</strong>
-                    </div>
+                <div>
+                    <small>MATRÍCULA</small>
+                    <strong>251K0052</strong>
                 </div>
 
-                <div class="dato">
-                    <span>💻</span>
-                    <div>
-                        <small>Carrera</small>
-                        <strong>Ingeniería en Sistemas Computacionales</strong>
-                    </div>
+                <div>
+                    <small>CARRERA</small>
+                    <strong>Ingeniería en Sistemas Computacionales</strong>
                 </div>
 
             </div>
 
-            <a href="#unidad1" class="btn-principal">
-                Explorar proyectos
+            <a href="#unidad1" class="main-button">
+                Ver mis proyectos
                 <span>↓</span>
             </a>
 
         </div>
 
-        <div class="hero-grafico">
 
-            <div class="grafico-circulo">
-                <div class="orbita orbita-1"></div>
-                <div class="orbita orbita-2"></div>
-                <div class="centro">
-                    <span>p5.js</span>
-                </div>
+        <!-- FIGURA DECORATIVA -->
+
+        <div class="hero-art">
+
+            <div class="circle circle-one"></div>
+            <div class="circle circle-two"></div>
+            <div class="circle circle-three"></div>
+
+            <div class="p5-logo">
+                p5.js
             </div>
 
         </div>
@@ -109,129 +101,170 @@
     </section>
 
 
-    <!-- CONTENIDO -->
+    <!-- ================= CONTENIDO ================= -->
+
     <main>
 
-        <!-- UNIDAD 1 -->
-        <section id="unidad1" class="unidad-seccion">
 
-            <div class="titulo-seccion">
+        <!-- ================= UNIDAD 1 ================= -->
 
-                <div>
-                    <span class="numero">01</span>
-                    <h2>Introducción a los ambientes de graficación</h2>
+        <section id="unidad1" class="unidad">
+
+            <div class="section-title">
+
+                <div class="number">
+                    01
                 </div>
 
-                <p>
-                    Primeros conceptos de graficación, primitivas,
-                    colores y arte digital utilizando p5.js.
-                </p>
+                <div>
+                    <p>UNIDAD 01</p>
+
+                    <h2>
+                        Introducción a los ambientes
+                        de graficación
+                    </h2>
+
+                    <span>
+                        Primitivas, colores y arte digital.
+                    </span>
+                </div>
 
             </div>
 
 
-            <div class="grid-actividades">
+            <div class="projects">
 
-                <!-- ACTIVIDAD 1.1 -->
-                <article class="tarjeta-actividad">
 
-                    <div class="numero-tarjeta">01</div>
+                <!-- PROYECTO 1 -->
 
-                    <div class="icono">◆</div>
+                <article class="project">
 
-                    <span class="tipo">PRIMITIVAS 2D</span>
+                    <div class="project-number">
+                        01
+                    </div>
 
-                    <h3>Actividad 1.1</h3>
+                    <div class="project-icon">
+                        ◆
+                    </div>
 
-                    <h4>Primitivas geométricas</h4>
-
-                    <p>
-                        Modelado geométrico estático de un logotipo
-                        institucional mediante primitivas bidimensionales
-                        aplicadas en p5.js.
+                    <p class="category">
+                        PRIMITIVAS 2D
                     </p>
 
-                    <div class="tecnologias">
+                    <h3>
+                        Primitivas geométricas
+                    </h3>
+
+                    <p class="project-description">
+                        Modelado geométrico estático de un logotipo
+                        institucional mediante primitivas
+                        bidimensionales utilizando p5.js.
+                    </p>
+
+                    <div class="tags">
                         <span>p5.js</span>
                         <span>2D</span>
                         <span>Primitivas</span>
                     </div>
 
-                    <a href="https://editor.p5js.org/LeonardoTun985/sketches/HAfGNs8g7"
-                       target="_blank"
-                       class="btn-enlace">
+                    <a
+                        href="https://editor.p5js.org/LeonardoTun985/sketches/HAfGNs8g7"
+                        target="_blank"
+                        class="project-button">
+
                         Ver proyecto
                         <span>↗</span>
+
                     </a>
 
                 </article>
 
 
-                <!-- ACTIVIDAD 1.2 -->
-                <article class="tarjeta-actividad">
+                <!-- PROYECTO 2 -->
 
-                    <div class="numero-tarjeta">02</div>
+                <article class="project">
 
-                    <div class="icono">●</div>
+                    <div class="project-number">
+                        02
+                    </div>
 
-                    <span class="tipo">COLOR</span>
+                    <div class="project-icon">
+                        ●
+                    </div>
 
-                    <h3>Actividad 1.2</h3>
+                    <p class="category">
+                        COLOR
+                    </p>
 
-                    <h4>Aplicación de colores</h4>
+                    <h3>
+                        Aplicación de colores
+                    </h3>
 
-                    <p>
+                    <p class="project-description">
                         Aplicación de diferentes formatos y métodos
-                        para utilizar colores dentro del lienzo
+                        para trabajar con colores dentro del lienzo
                         de p5.js.
                     </p>
 
-                    <div class="tecnologias">
+                    <div class="tags">
                         <span>p5.js</span>
                         <span>RGB</span>
                         <span>Color</span>
                     </div>
 
-                    <a href="https://editor.p5js.org/LeonardoTun985/sketches/-buNTDf48"
-                       target="_blank"
-                       class="btn-enlace">
+                    <a
+                        href="https://editor.p5js.org/LeonardoTun985/sketches/-buNTDf48"
+                        target="_blank"
+                        class="project-button">
+
                         Ver proyecto
                         <span>↗</span>
+
                     </a>
 
                 </article>
 
 
-                <!-- ACTIVIDAD 1.3 -->
-                <article class="tarjeta-actividad">
+                <!-- PROYECTO 3 -->
 
-                    <div class="numero-tarjeta">03</div>
+                <article class="project">
 
-                    <div class="icono">✦</div>
+                    <div class="project-number">
+                        03
+                    </div>
 
-                    <span class="tipo">ARTE DIGITAL</span>
+                    <div class="project-icon">
+                        ✦
+                    </div>
 
-                    <h3>Actividad 1.3</h3>
-
-                    <h4>Arte digital</h4>
-
-                    <p>
-                        Exploración de la importancia del diseño
-                        y la creatividad en el desarrollo de
-                        aplicaciones gráficas.
+                    <p class="category">
+                        ARTE DIGITAL
                     </p>
 
-                    <div class="tecnologias">
+                    <h3>
+                        Arte digital
+                    </h3>
+
+                    <p class="project-description">
+                        Exploración del diseño y la creatividad
+                        mediante la creación de una composición
+                        gráfica utilizando p5.js.
+                    </p>
+
+                    <div class="tags">
                         <span>p5.js</span>
                         <span>Arte</span>
                         <span>Diseño</span>
                     </div>
 
-                    <a href="https://editor.p5js.org/LeonardoTun985/sketches/YxiLfIN3p"
-                       target="_blank"
-                       class="btn-enlace">
+                    <a
+                        href="https://editor.p5js.org/LeonardoTun985/sketches/YxiLfIN3p"
+                        target="_blank"
+                        class="project-button">
+
                         Ver proyecto
                         <span>↗</span>
+
                     </a>
 
                 </article>
@@ -241,53 +274,67 @@
         </section>
 
 
-        <!-- UNIDAD 2 -->
-        <section id="unidad2" class="unidad-seccion unidad-dos">
+        <!-- ================= UNIDAD 2 ================= -->
 
-            <div class="titulo-seccion">
+        <section id="unidad2" class="unidad">
 
-                <div>
-                    <span class="numero">02</span>
-                    <h2>Graficación 2D</h2>
+            <div class="section-title">
+
+                <div class="number">
+                    02
                 </div>
 
-                <p>
-                    Transformaciones, movimiento, programación orientada
-                    a objetos y desarrollo de proyectos interactivos.
-                </p>
+                <div>
+                    <p>UNIDAD 02</p>
+
+                    <h2>
+                        Graficación 2D
+                    </h2>
+
+                    <span>
+                        Transformaciones y proyectos interactivos.
+                    </span>
+                </div>
 
             </div>
 
 
-            <div class="grid-actividades">
+            <div class="projects">
 
-                <!-- ACTIVIDAD 2.1 -->
-                <article class="tarjeta-actividad">
 
-                    <div class="numero-tarjeta">04</div>
+                <!-- PROYECTO 4 -->
 
-                    <div class="icono">↻</div>
+                <article class="project">
 
-                    <span class="tipo">TRANSFORMACIONES</span>
+                    <div class="project-number">
+                        04
+                    </div>
 
-                    <h3>Actividad 2.1</h3>
+                    <div class="project-icon">
+                        ↻
+                    </div>
 
-                    <h4>Traslación y rotación</h4>
+                    <p class="category">
+                        TRANSFORMACIONES
+                    </p>
 
-                    <p>
+                    <h3>
+                        Traslación y rotación
+                    </h3>
+
+                    <p class="project-description">
                         Implementación de transformaciones lineales
                         mediante traslación y rotación utilizando
                         push() y pop().
                     </p>
 
-                    <div class="tecnologias">
+                    <div class="tags">
                         <span>p5.js</span>
                         <span>2D</span>
                         <span>Transformaciones</span>
                     </div>
 
-                    <a href="#"
-                       class="btn-enlace">
+                    <a href="#" class="project-button disabled">
                         Próximamente
                         <span>→</span>
                     </a>
@@ -295,33 +342,39 @@
                 </article>
 
 
-                <!-- ACTIVIDAD 2.2 -->
-                <article class="tarjeta-actividad destacada">
+                <!-- PROYECTO 5 -->
 
-                    <div class="numero-tarjeta">05</div>
+                <article class="project">
 
-                    <div class="icono">▶</div>
+                    <div class="project-number">
+                        05
+                    </div>
 
-                    <span class="tipo">MINI-PROYECTO</span>
+                    <div class="project-icon">
+                        ▶
+                    </div>
 
-                    <h3>Actividad 2.2</h3>
-
-                    <h4>Videojuego clásico</h4>
-
-                    <p>
-                        Réplica de un videojuego clásico aplicando
-                        Programación Orientada a Objetos, lógica de
-                        colisiones y vectores.
+                    <p class="category">
+                        MINI-PROYECTO
                     </p>
 
-                    <div class="tecnologias">
+                    <h3>
+                        Videojuego clásico
+                    </h3>
+
+                    <p class="project-description">
+                        Réplica de un videojuego clásico utilizando
+                        Programación Orientada a Objetos, vectores
+                        y lógica de colisiones.
+                    </p>
+
+                    <div class="tags">
                         <span>p5.js</span>
                         <span>POO</span>
                         <span>Vectores</span>
                     </div>
 
-                    <a href="#"
-                       class="btn-enlace">
+                    <a href="#" class="project-button disabled">
                         Próximamente
                         <span>→</span>
                     </a>
@@ -333,72 +386,92 @@
         </section>
 
 
-        <!-- TECNOLOGÍAS -->
-        <section class="tecnologias-seccion">
+        <!-- ================= TECNOLOGÍAS ================= -->
 
-            <span class="subtitulo">HERRAMIENTAS</span>
+        <section class="technologies">
 
-            <h2>Tecnologías utilizadas</h2>
+            <p>HERRAMIENTAS</p>
 
-            <div class="herramientas">
+            <h2>
+                Tecnologías utilizadas
+            </h2>
 
-                <div class="herramienta">
-                    <span>JS</span>
-                    <p>JavaScript</p>
+            <div class="technology-grid">
+
+                <div class="technology">
+                    <strong>JS</strong>
+                    <span>JavaScript</span>
                 </div>
 
-                <div class="herramienta">
-                    <span>p5</span>
-                    <p>p5.js</p>
+                <div class="technology">
+                    <strong>p5</strong>
+                    <span>p5.js</span>
                 </div>
 
-                <div class="herramienta">
-                    <span>HTML</span>
-                    <p>HTML5</p>
+                <div class="technology">
+                    <strong>HTML</strong>
+                    <span>HTML5</span>
                 </div>
 
-                <div class="herramienta">
-                    <span>CSS</span>
-                    <p>CSS3</p>
+                <div class="technology">
+                    <strong>CSS</strong>
+                    <span>CSS3</span>
                 </div>
 
-                <div class="herramienta">
-                    <span>Git</span>
-                    <p>GitHub</p>
+                <div class="technology">
+                    <strong>Git</strong>
+                    <span>GitHub</span>
                 </div>
 
             </div>
+
+        </section>
+
+
+        <!-- ================= SOBRE MÍ ================= -->
+
+        <section id="sobre-mi" class="about">
+
+            <p>SOBRE EL PORTAFOLIO</p>
+
+            <h2>
+                Ingeniería en Sistemas
+                <span>Computacionales</span>
+            </h2>
+
+            <p>
+                Este sitio web fue desarrollado como parte de las
+                actividades académicas de la asignatura de Graficación,
+                mostrando los diferentes proyectos realizados durante
+                el curso.
+            </p>
 
         </section>
 
     </main>
 
 
-    <!-- FOOTER -->
-    <footer id="contacto">
+    <!-- ================= FOOTER ================= -->
 
-        <div class="footer-contenido">
+    <footer>
 
-            <div>
-                <div class="logo">
-                    <span>&lt;/&gt;</span> JL
-                </div>
+        <div class="footer-top">
 
-                <p>
-                    Portafolio académico de Graficación.
-                    Ingeniería en Sistemas Computacionales.
-                </p>
+            <div class="logo">
+                <span>&lt;/&gt;</span> JL
             </div>
 
-            <div class="footer-derecha">
+            <div class="footer-links">
 
-                <a href="https://github.com/"
-                   target="_blank">
+                <a
+                    href="https://github.com/"
+                    target="_blank">
                     GitHub ↗
                 </a>
 
-                <a href="https://editor.p5js.org/LeonardoTun985/"
-                   target="_blank">
+                <a
+                    href="https://editor.p5js.org/LeonardoTun985/"
+                    target="_blank">
                     p5.js ↗
                 </a>
 
@@ -406,759 +479,15 @@
 
         </div>
 
-        <div class="copyright">
-            © 2026 Javier Leonardo Tun Ek · Todos los proyectos académicos.
+        <div class="footer-bottom">
+            © 2026 Javier Leonardo Tun Ek · Portafolio de Graficación
         </div>
 
     </footer>
 
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>
-
-
-```css
-/* =========================
-   CONFIGURACIÓN GENERAL
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #080b18;
-    color: #ffffff;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-/* =========================
-   FONDO
-========================= */
-
-.fondo {
-    position: fixed;
-    inset: 0;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.circulo {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.18;
-}
-
-.circulo-1 {
-    width: 400px;
-    height: 400px;
-    background: #6c5ce7;
-    top: 5%;
-    left: -150px;
-}
-
-.circulo-2 {
-    width: 350px;
-    height: 350px;
-    background: #00cec9;
-    right: -100px;
-    top: 35%;
-}
-
-.circulo-3 {
-    width: 300px;
-    height: 300px;
-    background: #a29bfe;
-    bottom: -100px;
-    left: 40%;
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
-    height: 75px;
-    padding: 0 8%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: rgba(8, 11, 24, 0.85);
-    backdrop-filter: blur(15px);
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.logo {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.logo span {
-    color: #6c5ce7;
-}
-
-.navbar nav {
-    display: flex;
-    gap: 30px;
-}
-
-.navbar nav a {
-    color: #aeb4ca;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.navbar nav a:hover {
-    color: #ffffff;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 720px;
-    padding: 100px 10%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 60px;
-}
-
-.hero-contenido {
-    max-width: 700px;
-}
-
-.etiqueta,
-.subtitulo,
-.tipo {
-    color: #8c7cff;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-}
-
-.hero h1 {
-    margin: 15px 0;
-
-    font-family: 'Orbitron', sans-serif;
-    font-size: clamp(50px, 7vw, 90px);
-    line-height: 1.05;
-}
-
-.hero h1 span {
-    display: block;
-
-    background: linear-gradient(
-        90deg,
-        #8c7cff,
-        #00cec9
-    );
-
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.descripcion {
-    max-width: 600px;
-    margin: 25px 0;
-
-    color: #aeb4ca;
-    font-size: 17px;
-}
-
-
-/* =========================
-   DATOS
-========================= */
-
-.datos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 35px 0;
-}
-
-.dato {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    padding: 12px 15px;
-
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-}
-
-.dato > span {
-    font-size: 20px;
-}
-
-.dato small {
-    display: block;
-    color: #72798f;
-    font-size: 10px;
-}
-
-.dato strong {
-    font-size: 12px;
-}
-
-
-/* =========================
-   BOTÓN PRINCIPAL
-========================= */
-
-.btn-principal {
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-
-    padding: 15px 25px;
-
-    border-radius: 10px;
-
-    background: linear-gradient(
-        135deg,
-        #6c5ce7,
-        #4834d4
-    );
-
-    font-weight: 600;
-
-    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.25);
-
-    transition: 0.3s;
-}
-
-.btn-principal:hover {
-    transform: translateY(-4px);
-}
-
-
-/* =========================
-   GRÁFICO HERO
-========================= */
-
-.hero-grafico {
-    width: 350px;
-    height: 350px;
-
-    display: grid;
-    place-items: center;
-}
-
-.grafico-circulo {
-    position: relative;
-
-    width: 270px;
-    height: 270px;
-
-    border: 1px solid rgba(140, 124, 255, 0.4);
-    border-radius: 50%;
-
-    display: grid;
-    place-items: center;
-
-    animation: flotar 5s ease-in-out infinite;
-}
-
-.centro {
-    width: 130px;
-    height: 130px;
-
-    border-radius: 50%;
-
-    display: grid;
-    place-items: center;
-
-    background: linear-gradient(
-        135deg,
-        #6c5ce7,
-        #00cec9
-    );
-
-    box-shadow:
-        0 0 50px rgba(108, 92, 231, 0.5);
-}
-
-.centro span {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.orbita {
-    position: absolute;
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 50%;
-}
-
-.orbita-1 {
-    width: 330px;
-    height: 150px;
-    transform: rotate(30deg);
-}
-
-.orbita-2 {
-    width: 330px;
-    height: 150px;
-    transform: rotate(-30deg);
-}
-
-@keyframes flotar {
-
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-15px);
-    }
-}
-
-
-/* =========================
-   SECCIONES
-========================= */
-
-main {
-    padding: 30px 8%;
-}
-
-.unidad-seccion {
-    padding: 100px 0;
-}
-
-.titulo-seccion {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-
-    gap: 50px;
-
-    margin-bottom: 50px;
-}
-
-.titulo-seccion > div {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.numero {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 50px;
-    color: #6c5ce7;
-    opacity: 0.8;
-}
-
-.titulo-seccion h2 {
-    max-width: 650px;
-
-    font-family: 'Orbitron', sans-serif;
-    font-size: 32px;
-    line-height: 1.3;
-}
-
-.titulo-seccion p {
-    max-width: 400px;
-    color: #7f879e;
-}
-
-
-/* =========================
-   TARJETAS
-========================= */
-
-.grid-actividades {
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
-
-    gap: 25px;
-}
-
-.tarjeta-actividad {
-    position: relative;
-
-    padding: 35px;
-
-    background: rgba(255, 255, 255, 0.035);
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    transition: 0.4s;
-}
-
-.tarjeta-actividad::before {
-    content: "";
-
-    position: absolute;
-
-    width: 100%;
-    height: 3px;
-
-    top: 0;
-    left: 0;
-
-    background: linear-gradient(
-        90deg,
-        #6c5ce7,
-        #00cec9
-    );
-
-    transform: scaleX(0);
-    transform-origin: left;
-
-    transition: 0.4s;
-}
-
-.tarjeta-actividad:hover {
-    transform: translateY(-8px);
-
-    border-color: rgba(140, 124, 255, 0.4);
-
-    background: rgba(255, 255, 255, 0.06);
-}
-
-.tarjeta-actividad:hover::before {
-    transform: scaleX(1);
-}
-
-.numero-tarjeta {
-    position: absolute;
-
-    right: 25px;
-    top: 20px;
-
-    font-family: 'Orbitron', sans-serif;
-
-    font-size: 45px;
-
-    color: rgba(255,255,255,0.04);
-}
-
-.icono {
-    width: 50px;
-    height: 50px;
-
-    display: grid;
-    place-items: center;
-
-    margin-bottom: 25px;
-
-    border-radius: 12px;
-
-    background: rgba(108, 92, 231, 0.15);
-
-    color: #9b8cff;
-
-    font-size: 22px;
-}
-
-.tarjeta-actividad h3 {
-    margin-top: 10px;
-
-    font-family: 'Orbitron', sans-serif;
-    font-size: 20px;
-}
-
-.tarjeta-actividad h4 {
-    margin: 5px 0 15px;
-
-    color: #9b8cff;
-
-    font-size: 14px;
-}
-
-.tarjeta-actividad p {
-    min-height: 100px;
-
-    color: #8f96aa;
-
-    font-size: 14px;
-}
-
-.tecnologias {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 7px;
-
-    margin: 20px 0;
-}
-
-.tecnologias span {
-    padding: 5px 9px;
-
-    border-radius: 6px;
-
-    background: rgba(255,255,255,0.05);
-
-    color: #9ba2b8;
-
-    font-size: 10px;
-}
-
-
-/* =========================
-   BOTONES TARJETAS
-========================= */
-
-.btn-enlace {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 12px 15px;
-
-    border: 1px solid rgba(140,124,255,0.25);
-    border-radius: 9px;
-
-    color: #b8b0ff;
-
-    font-size: 13px;
-    font-weight: 600;
-
-    transition: 0.3s;
-}
-
-.btn-enlace:hover {
-    background: #6c5ce7;
-    color: white;
-
-    border-color: #6c5ce7;
-}
-
-
-/* =========================
-   TECNOLOGÍAS
-========================= */
-
-.tecnologias-seccion {
-    padding: 100px 0;
-
-    text-align: center;
-
-    border-top: 1px solid rgba(255,255,255,0.06);
-}
-
-.tecnologias-seccion h2 {
-    margin: 10px 0 40px;
-
-    font-family: 'Orbitron', sans-serif;
-    font-size: 32px;
-}
-
-.herramientas {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    gap: 20px;
-}
-
-.herramienta {
-    width: 130px;
-
-    padding: 20px;
-
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 15px;
-
-    background: rgba(255,255,255,0.03);
-
-    transition: 0.3s;
-}
-
-.herramienta:hover {
-    transform: translateY(-5px);
-    border-color: #6c5ce7;
-}
-
-.herramienta span {
-    display: block;
-
-    margin-bottom: 8px;
-
-    font-family: 'Orbitron', sans-serif;
-    font-size: 20px;
-
-    color: #8c7cff;
-}
-
-.herramienta p {
-    color: #8f96aa;
-    font-size: 12px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    padding: 50px 8% 25px;
-
-    border-top: 1px solid rgba(255,255,255,0.08);
-
-    background: rgba(0,0,0,0.15);
-}
-
-.footer-contenido {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    gap: 30px;
-}
-
-.footer-contenido p {
-    margin-top: 10px;
-
-    max-width: 400px;
-
-    color: #72798f;
-    font-size: 13px;
-}
-
-.footer-derecha {
-    display: flex;
-    gap: 25px;
-}
-
-.footer-derecha a {
-    color: #9b8cff;
-    font-size: 14px;
-
-    transition: 0.3s;
-}
-
-.footer-derecha a:hover {
-    color: white;
-}
-
-.copyright {
-    margin-top: 40px;
-    padding-top: 20px;
-
-    border-top: 1px solid rgba(255,255,255,0.06);
-
-    text-align: center;
-
-    color: #565d72;
-    font-size: 11px;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 850px) {
-
-    .navbar {
-        padding: 0 5%;
-    }
-
-    .navbar nav {
-        display: none;
-    }
-
-    .hero {
-        padding: 80px 7%;
-        text-align: center;
-    }
-
-    .hero {
-        flex-direction: column;
-    }
-
-    .datos {
-        justify-content: center;
-    }
-
-    .hero-grafico {
-        transform: scale(0.8);
-    }
-
-    .titulo-seccion {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .titulo-seccion > div {
-        align-items: flex-start;
-    }
-
-    .numero {
-        font-size: 35px;
-    }
-
-    .titulo-seccion h2 {
-        font-size: 25px;
-    }
-
-    .footer-contenido {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-
-@media (max-width: 500px) {
-
-    .hero h1 {
-        font-size: 45px;
-    }
-
-    .dato {
-        width: 100%;
-        text-align: left;
-    }
-
-    .tarjeta-actividad {
-        padding: 25px;
-    }
-
-    .grafico-circulo {
-        transform: scale(0.8);
-    }
-}
 ```
-
