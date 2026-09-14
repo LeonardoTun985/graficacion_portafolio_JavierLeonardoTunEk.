@@ -1,69 +1,285 @@
 
+```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Graficación | ISC</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>Portafolio web de Prácticas - Graficación</h1>
-        <p><strong>Alumno:</strong> [JavierLeonardoTunEk] | <strong>Matrícula:</strong> [251K0052]</p>
-        <p>Ingeniería en Sistemas Computacionales - 3er Semestre</p>
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+
+        <div class="contenedor-header">
+
+            <div class="icono">🎨</div>
+
+            <div>
+                <h1>Portafolio de Graficación</h1>
+
+                <p class="subtitulo">
+                    Prácticas y proyectos de Ingeniería en Sistemas Computacionales
+                </p>
+            </div>
+
+        </div>
+
+        <div class="datos-alumno">
+            <p>
+                <strong>Alumno:</strong> Javier Leonardo Tun Ek
+            </p>
+
+            <p>
+                <strong>Matrícula:</strong> 251K0052
+            </p>
+
+            <p>
+                Ingeniería en Sistemas Computacionales · 3er Semestre
+            </p>
+        </div>
+
     </header>
 
-    <main>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor">
+
+
+        <!-- UNIDAD 1 -->
         <section class="unidad-seccion">
-            <h2>Unidad 1: Introducción a los ambientes de graficación</h2>
+
+            <div class="titulo-unidad">
+                <span>01</span>
+
+                <div>
+                    <h2>Introducción a los ambientes de graficación</h2>
+
+                    <p>
+                        Conceptos básicos, primitivas, colores y diseño gráfico.
+                    </p>
+                </div>
+            </div>
+
+
             <div class="grid-actividades">
-                
-                <div class="tarjeta-actividad">
-                    <h3>Actividad 1.1: Primitivas</h3>
-                    <p>Modelado geométrico estático de un logotipo institucional mediante primitivas bidimensionales aplicadas en p5.js.</p>
-                    <a href="https://editor.p5js.org/LeonardoTun985/sketches/HAfGNs8g7" target="_blank" class="btn-enlace">Ver Proyecto 2D</a>
-                </div>
-
-                <div class="tarjeta-actividad">
-                    <h3>Actividad 1.2: Colores</h3>
-                    <p>Aplicación de los formatos para uso de colores en el lienzo.</p>
-                    <a href="https://editor.p5js.org/LeonardoTun985/sketches/-buNTDf48" target="_blank" class="btn-enlace">Ver Proyecto </a>
-                </div>
 
 
-                   <div class="tarjeta-actividad">
-                    <h3>Actividad 1.3: Arte digital</h3>
-                    <p>Explicar la importancia del diseño de aplicaciones gráficas.</p>
-                    <a href="https://editor.p5js.org/LeonardoTun985/sketches/YxiLfIN3p" target="_blank" class="btn-enlace">Ver Proyecto</a>
-                </div>
+                <!-- ACTIVIDAD 1.1 -->
+                <article class="tarjeta-actividad">
+
+                    <div class="numero">01</div>
+
+                    <h3>Primitivas</h3>
+
+                    <p>
+                        Modelado geométrico estático de un logotipo institucional
+                        mediante primitivas bidimensionales aplicadas en p5.js.
+                    </p>
+
+                    <a
+                        href="https://editor.p5js.org/LeonardoTun985/sketches/HAfGNs8g7"
+                        target="_blank"
+                        class="btn-enlace">
+
+                        Ver proyecto
+                        <span>→</span>
+
+                    </a>
+
+                </article>
 
 
+                <!-- ACTIVIDAD 1.2 -->
+                <article class="tarjeta-actividad">
+
+                    <div class="numero">02</div>
+
+                    <h3>Colores</h3>
+
+                    <p>
+                        Aplicación de diferentes formatos y combinaciones
+                        de colores dentro del lienzo.
+                    </p>
+
+                    <a
+                        href="https://editor.p5js.org/LeonardoTun985/sketches/-buNTDf48"
+                        target="_blank"
+                        class="btn-enlace">
+
+                        Ver proyecto
+                        <span>→</span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- ACTIVIDAD 1.3 -->
+                <article class="tarjeta-actividad">
+
+                    <div class="numero">03</div>
+
+                    <h3>Arte digital</h3>
+
+                    <p>
+                        Explicación de la importancia del diseño y desarrollo
+                        de aplicaciones gráficas.
+                    </p>
+
+                    <a
+                        href="https://editor.p5js.org/LeonardoTun985/sketches/YxiLfIN3p"
+                        target="_blank"
+                        class="btn-enlace">
+
+                        Ver proyecto
+                        <span>→</span>
+
+                    </a>
+
+                </article>
 
             </div>
+
         </section>
 
-        <section class="unidad-seccion">
-            <h2>Unidad 2: Graficación 2D</h2>
-            <div class="grid-actividades">
-                
-                <div class="tarjeta-actividad">
-                    <h3>Actividad 2.1: Traslación</h3>
-                    <p>Implementación de transformaciones lineales (traslación y rotación) aislando la matriz gráfica mediante push() y pop().</p>
-                    <a href="#" target="_blank" class="btn-enlace">Ver Proyecto</a>
-                </div>
 
-                <div class="tarjeta-actividad">
-                    <h3>Actividad 2.2: Mini-Proyecto </h3>
-                    <p>Replica de un videojuego clásico aplicando Programación Orientada a Objetos, lógica de colisiones y vectores.</p>
-                    <a href="#" target="_blank" class="btn-enlace">Jugar Ahora</a>
+
+        <!-- UNIDAD 2 -->
+        <section class="unidad-seccion">
+
+            <div class="titulo-unidad">
+
+                <span>02</span>
+
+                <div>
+                    <h2>Graficación 2D</h2>
+
+                    <p>
+                        Transformaciones, movimiento y desarrollo de proyectos gráficos.
+                    </p>
                 </div>
 
             </div>
+
+
+            <div class="grid-actividades">
+
+
+                <!-- ACTIVIDAD 2.1 -->
+                <article class="tarjeta-actividad">
+
+                    <div class="numero">01</div>
+
+                    <h3>Traslación</h3>
+
+                    <p>
+                        Implementación de transformaciones lineales como
+                        traslación y rotación utilizando push() y pop().
+                    </p>
+
+                    <a
+                        href="#"
+                        class="btn-enlace">
+
+                        Ver proyecto
+                        <span>→</span>
+
+                    </a>
+
+                </article>
+
+
+                <!-- ACTIVIDAD 2.2 -->
+                <article class="tarjeta-actividad">
+
+                    <div class="numero">02</div>
+
+                    <h3>Mini-Proyecto</h3>
+
+                    <p>
+                        Réplica de un videojuego clásico aplicando Programación
+                        Orientada a Objetos, colisiones y vectores.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="btn-enlace">
+
+                        Jugar ahora
+                        <span>→</span>
+
+                    </a>
+
+                </article>
+
+            </div>
+
         </section>
 
-        </main>
+
+
+        <!-- DOCUMENTACIÓN -->
+        <section class="documentacion">
+
+            <div class="documento-icono">
+                📄
+            </div>
+
+            <div class="documento-contenido">
+
+                <span class="etiqueta">
+                    DOCUMENTACIÓN
+                </span>
+
+                <h2>
+                    Guía práctica de Graficación
+                </h2>
+
+                <p>
+                    Consulta la guía con la sintaxis, configuración,
+                    primitivas, propiedades visuales y pasos utilizados
+                    en Processing, HTML/CSS y Matplotlib.
+                </p>
+
+            </div>
+
+            <a
+                href="Guia-Graficacion.docx"
+                download
+                class="btn-word">
+
+                Descargar Word
+                <span>↓</span>
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            © 2026 · Javier Leonardo Tun Ek
+        </p>
+
+        <p>
+            Ingeniería en Sistemas Computacionales
+        </p>
+
+    </footer>
+
 
 </body>
 </html>
+```
