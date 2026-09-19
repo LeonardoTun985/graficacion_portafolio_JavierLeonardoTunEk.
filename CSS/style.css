@@ -4,26 +4,25 @@
 
 :root {
 
-    --background: #f4f6f8;
+    --background: #171b24;
 
-    --white: #ffffff;
+    --white: #202631;
 
-    --black: #111827;
+    --black: #f5f7fa;
 
-    --text: #4b5563;
+    --text: #b5bdca;
 
-    --muted: #8a94a6;
+    --muted: #7d8798;
 
-    --blue: #2563eb;
+    --blue: #4f8cff;
 
-    --blue-light: #eaf1ff;
+    --blue-light: #202a3d;
 
-    --border: #e5e9f0;
+    --border: #303846;
 
-    --dark-card: #111827;
+    --dark-card: #0f141d;
 
 }
-
 
 * {
 
