@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Portafolio de Graficación</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
 
-    <!-- MENÚ -->
-    <header>
-        <nav class="menu">
+    <!-- ENCABEZADO -->
 
-            <a href="#inicio" class="logo">
-                GRAFICACIÓN
-            </a>
+    <header class="header">
 
-            <div class="links">
-                <a href="#inicio">Inicio</a>
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#actividades">Actividades</a>
-                <a href="#herramientas">Herramientas</a>
+        <div class="contenedor menu">
+
+            <div class="logo">
+                &lt;GRAFICACIÓN /&gt;
             </div>
 
-        </nav>
+            <nav>
+
+                <a href="#inicio">Inicio</a>
+
+                <a href="#sobre-mi">Sobre mí</a>
+
+                <a href="#actividades">Actividades</a>
+
+                <a href="#herramientas">Herramientas</a>
+
+            </nav>
+
+        </div>
+
     </header>
 
 
     <!-- INICIO -->
-    <main>
 
-        <section id="inicio" class="inicio">
+    <section id="inicio" class="inicio">
+
+        <div class="contenedor inicio-contenido">
 
             <div class="inicio-texto">
 
@@ -47,135 +61,150 @@
                 </h1>
 
                 <p class="descripcion">
-                    Bienvenido a mi página web. Aquí encontrarás mis
-                    actividades, prácticas y proyectos realizados durante
-                    la materia de Graficación.
+
+                    Bienvenido a mi portafolio académico.
+                    Aquí presento mis actividades y prácticas
+                    realizadas durante la materia de Graficación.
+
                 </p>
 
                 <a href="#actividades" class="boton">
-                    Ver mis actividades
+                    Ver actividades
                 </a>
 
             </div>
 
 
-            <div class="figura">
+            <div class="codigo">
 
-                <div class="cuadro">
+                <div class="codigo-barra">
 
-                    <div class="barra">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
-                    <div class="codigo">
+                </div>
 
-                        <p>
-                            <span class="rosa">function</span>
-                            graficacion() {
-                        </p>
+                <div class="codigo-contenido">
 
-                        <p class="tab">
-                            <span class="azul">let</span>
-                            alumno =
-                            <span class="verde">
-                                "Javier Leonardo";
-                            </span>
-                        </p>
+                    <p>
+                        <b>function</b>
+                        graficacion() {
+                    </p>
 
-                        <p class="tab">
-                            <span class="azul">return</span>
-                            alumno;
-                        </p>
+                    <p class="sangria">
+                        <b>let</b> alumno =
+                        <i>"Javier Leonardo";</i>
+                    </p>
 
-                        <p>
-                            }
-                        </p>
+                    <p class="sangria">
+                        <b>let</b> matricula =
+                        <i>"251K0052";</i>
+                    </p>
 
-                    </div>
+                    <p class="sangria">
+                        <b>return</b> alumno;
+                    </p>
+
+                    <p>
+                        }
+                    </p>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- SOBRE MÍ -->
-        <section id="sobre-mi" class="seccion">
+    <!-- SOBRE MÍ -->
+
+    <section id="sobre-mi" class="seccion">
+
+        <div class="contenedor">
 
             <div class="titulo">
 
-                <p>01</p>
+                <span>01</span>
 
                 <h2>Sobre mí</h2>
 
             </div>
 
 
-            <div class="sobre">
+            <div class="sobre-mi">
 
-                <div class="texto">
+                <div>
 
-                    <h3>Javier Leonardo Tun Ek</h3>
+                    <h3>
+                        Javier Leonardo Tun Ek
+                    </h3>
 
                     <p>
+
                         Soy estudiante de Ingeniería en Sistemas
-                        Computacionales. Este sitio web fue creado
-                        como parte de mi portafolio académico para
-                        la materia de Graficación.
+                        Computacionales. Este sitio web forma parte
+                        de mi portafolio académico de la materia
+                        de Graficación.
+
                     </p>
 
                     <p>
-                        En esta página presento diferentes trabajos
-                        relacionados con programación, figuras
-                        geométricas y herramientas de representación
-                        gráfica.
+
+                        En este espacio presento diferentes
+                        actividades relacionadas con programación,
+                        figuras geométricas y representación gráfica.
+
                     </p>
 
                 </div>
 
 
-                <div class="datos">
+                <div class="informacion">
 
-                    <div class="dato">
-                        <strong>👨‍🎓 Alumno</strong>
-                        <span>Javier Leonardo Tun Ek</span>
+                    <div>
+                        <strong>Alumno</strong>
+                        <p>Javier Leonardo Tun Ek</p>
                     </div>
 
-                    <div class="dato">
-                        <strong>🆔 Matrícula</strong>
-                        <span>251K0052</span>
+                    <div>
+                        <strong>Matrícula</strong>
+                        <p>251K0052</p>
                     </div>
 
-                    <div class="dato">
-                        <strong>🎓 Carrera</strong>
-                        <span>
-                            Ingeniería en Sistemas Computacionales
-                        </span>
+                    <div>
+                        <strong>Carrera</strong>
+                        <p>Ingeniería en Sistemas Computacionales</p>
                     </div>
 
-                    <div class="dato">
-                        <strong>📚 Semestre</strong>
-                        <span>3er Semestre</span>
+                    <div>
+                        <strong>Semestre</strong>
+                        <p>3er Semestre</p>
                     </div>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- ACTIVIDADES -->
-        <section id="actividades" class="seccion actividades">
+    <!-- ACTIVIDADES -->
+
+    <section id="actividades"
+             class="seccion actividades">
+
+        <div class="contenedor">
 
             <div class="titulo">
 
-                <p>02</p>
+                <span>02</span>
 
-                <h2>Mis actividades</h2>
+                <h2>Actividades</h2>
 
             </div>
 
@@ -183,130 +212,134 @@
             <div class="tarjetas">
 
 
-                <!-- ACTIVIDAD 1 -->
                 <article class="tarjeta">
 
-                    <div class="icono">
-                        <span>◆</span>
+                    <div class="numero">
+                        01
                     </div>
 
-                    <div class="contenido">
+                    <h3>
+                        Actividad 1.1
+                    </h3>
 
-                        <small>ACTIVIDAD 1.1</small>
+                    <h4>
+                        Primitivas
+                    </h4>
 
-                        <h3>Primitivas</h3>
+                    <p>
 
-                        <p>
-                            Modelado geométrico utilizando primitivas
-                            bidimensionales para crear diferentes
-                            representaciones gráficas.
-                        </p>
+                        Modelado geométrico utilizando
+                        primitivas bidimensionales.
 
-                        <a href="#">
-                            Ver actividad →
-                        </a>
+                    </p>
 
-                    </div>
+                    <a href="#">
+                        Ver actividad →
+                    </a>
 
                 </article>
 
 
-                <!-- ACTIVIDAD 2 -->
                 <article class="tarjeta">
 
-                    <div class="icono">
-                        <span>▲</span>
+                    <div class="numero">
+                        02
                     </div>
 
-                    <div class="contenido">
+                    <h3>
+                        Actividad 1.2
+                    </h3>
 
-                        <small>ACTIVIDAD 1.2</small>
+                    <h4>
+                        Figuras geométricas
+                    </h4>
 
-                        <h3>Figuras geométricas</h3>
+                    <p>
 
-                        <p>
-                            Creación de figuras utilizando diferentes
-                            formas, posiciones y propiedades visuales.
-                        </p>
+                        Creación de diferentes figuras
+                        geométricas mediante programación.
 
-                        <a href="#">
-                            Ver actividad →
-                        </a>
+                    </p>
 
-                    </div>
+                    <a href="#">
+                        Ver actividad →
+                    </a>
 
                 </article>
 
 
-                <!-- ACTIVIDAD 3 -->
                 <article class="tarjeta">
 
-                    <div class="icono">
-                        <span>●</span>
+                    <div class="numero">
+                        03
                     </div>
 
-                    <div class="contenido">
+                    <h3>
+                        Actividad 1.3
+                    </h3>
 
-                        <small>ACTIVIDAD 1.3</small>
+                    <h4>
+                        Herramientas
+                    </h4>
 
-                        <h3>Herramientas de graficación</h3>
+                    <p>
 
-                        <p>
-                            Prácticas realizadas utilizando diferentes
-                            herramientas y lenguajes de programación.
-                        </p>
+                        Uso de diferentes herramientas
+                        para crear representaciones gráficas.
 
-                        <a href="#">
-                            Ver actividad →
-                        </a>
+                    </p>
 
-                    </div>
+                    <a href="#">
+                        Ver actividad →
+                    </a>
 
                 </article>
 
 
-                <!-- ACTIVIDAD 4 -->
                 <article class="tarjeta">
 
-                    <div class="icono documento">
-                        <span>▣</span>
+                    <div class="numero">
+                        04
                     </div>
 
-                    <div class="contenido">
+                    <h3>
+                        Actividad 1.4
+                    </h3>
 
-                        <small>ACTIVIDAD 1.4</small>
+                    <h4>
+                        Documento
+                    </h4>
 
-                        <h3>Documento</h3>
+                    <p>
 
-                        <p>
-                            Consulta el documento correspondiente
-                            a esta actividad.
-                        </p>
+                        Documento correspondiente a la
+                        actividad académica.
 
-                        <!--
-                        Cuando subas tu PDF, cambia el nombre
-                        por el nombre exacto de tu archivo.
-                        -->
+                    </p>
 
-                        <a href="ACTIVIDAD 1.4.pdf" target="_blank">
-                            Abrir documento →
-                        </a>
-
-                    </div>
+                    <a href="#">
+                        Abrir documento →
+                    </a>
 
                 </article>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- HERRAMIENTAS -->
-        <section id="herramientas" class="seccion">
+    <!-- HERRAMIENTAS -->
+
+    <section id="herramientas"
+             class="seccion">
+
+        <div class="contenedor">
 
             <div class="titulo">
 
-                <p>03</p>
+                <span>03</span>
 
                 <h2>Herramientas</h2>
 
@@ -316,53 +349,99 @@
             <div class="herramientas">
 
                 <div class="herramienta">
+
                     <strong>HTML</strong>
-                    <span>Estructura web</span>
+
+                    <p>
+                        Estructura web
+                    </p>
+
                 </div>
 
+
                 <div class="herramienta">
+
                     <strong>CSS</strong>
-                    <span>Diseño web</span>
+
+                    <p>
+                        Diseño web
+                    </p>
+
                 </div>
 
+
                 <div class="herramienta">
+
                     <strong>p5.js</strong>
-                    <span>Gráficos</span>
+
+                    <p>
+                        Gráficos
+                    </p>
+
                 </div>
 
+
                 <div class="herramienta">
+
                     <strong>Processing</strong>
-                    <span>Programación visual</span>
+
+                    <p>
+                        Programación visual
+                    </p>
+
                 </div>
 
+
                 <div class="herramienta">
+
                     <strong>Python</strong>
-                    <span>Matplotlib</span>
+
+                    <p>
+                        Matplotlib
+                    </p>
+
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
 
 
     <!-- PIE DE PÁGINA -->
+
     <footer>
 
-        <h3>
-            GRAFICACIÓN | ISC
-        </h3>
+        <div class="contenedor">
 
-        <p>
-            Javier Leonardo Tun Ek · 251K0052
-        </p>
+            <h3>
+                &lt;GRAFICACIÓN /&gt;
+            </h3>
 
-        <p class="copy">
-            © 2026 Portafolio académico
-        </p>
+            <p>
+                Javier Leonardo Tun Ek
+            </p>
+
+            <p>
+                Matrícula: 251K0052
+            </p>
+
+            <p>
+                Ingeniería en Sistemas Computacionales
+            </p>
+
+            <div class="linea"></div>
+
+            <small>
+                © 2026 Portafolio académico
+            </small>
+
+        </div>
 
     </footer>
 
+
 </body>
+
 </html>
