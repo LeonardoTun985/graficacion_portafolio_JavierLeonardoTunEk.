@@ -1,0 +1,151 @@
+function setup() {
+  createCanvas(800, 600);
+}
+
+function draw() {
+  background(20, 40, 100);
+
+  //Nubes 
+  
+  strokeWeight(12);
+
+  noFill();
+  strokeWeight(12);
+
+  stroke(40, 90, 180);
+  arc(180, 180, 250, 120,100,10);
+  arc(300, 120, 300, 150, 0, 22);
+  arc(470, 180, 280, 140, 100,10);
+  arc(620, 130, 300, 160, 0, 35);
+
+  stroke(60, 120, 210);
+  arc(220, 240, 250, 130, 0, 35);
+  arc(390, 250, 300, 150, 35,35);
+  arc(570, 250, 280, 140, 0, 35);
+
+  stroke(80, 150, 220);
+  arc(350, 320, 350, 140, 10.10);
+  arc(650, 320, 300, 130, 0, 3);
+
+
+  // ESTRELLAS
+
+  fill(255, 220, 50);
+  noStroke();
+  ellipse(120, 90, 35, 35);
+
+  fill(255, 210, 40);
+  noStroke();
+  ellipse(300, 70, 30, 30);
+
+  stroke(255, 230, 80);
+  strokeWeight(4);
+  line(300, 35, 300, 105);
+  line(265, 70, 335, 70);
+
+  fill(255, 220, 60);
+  noStroke();
+  ellipse(500, 100, 40, 40);
+
+  stroke(255, 230, 80);
+  strokeWeight(5);
+  line(500, 50, 500, 150);
+  line(450, 100, 550, 100);
+
+  fill(255, 210, 50);
+  noStroke();
+  ellipse(680, 70, 28, 28);
+
+  // LUNA
+
+  fill(255, 200, 50);
+  noStroke();
+  ellipse(650, 190, 100, 100);
+  
+  fill(255, 225, 90);
+  ellipse(650, 190, 70, 70);
+
+  // MONTAÑAS
+  noStroke();
+  fill(30, 50, 100);
+
+  triangle(0, 430, 180, 280, 350, 430);
+  triangle(200, 430, 400, 250, 600, 430);
+  triangle(450, 430, 650, 290, 800, 430);
+
+  fill(25, 40, 80);
+
+  triangle(0, 470, 150, 350, 300, 470);
+  triangle(250, 470, 500, 330, 700, 470);
+  triangle(550, 470, 700, 360, 800, 470);
+
+  // Casas
+  fill(50, 60, 100);
+  rect(330, 420, 70, 70);
+  rect(410, 400, 80, 90);
+  rect(500, 425, 70, 65);
+  rect(580, 410, 75, 80);
+
+  fill(35, 30, 70);
+
+  triangle(320, 420, 365, 380, 410, 420);
+  triangle(400, 400, 450, 355, 500, 400);
+  triangle(490, 425, 535, 385, 580, 425);
+  triangle(570, 410, 617, 370, 665, 410);
+
+  fill(255, 200, 50);
+
+  rect(350, 440, 15, 20);
+  rect(435, 425, 18, 25);
+  rect(520, 445, 15, 20);
+  rect(605, 430, 18, 22);
+
+  fill(60, 70, 110);
+  rect(230, 410, 60, 80);
+
+  triangle(220, 410, 260, 320, 300, 410);
+
+  fill(255, 200, 50);
+  ellipse(260, 390, 18, 25);
+
+  // ÁRBOL
+
+  fill(25, 25, 35);
+
+  triangle(90, 570, 130, 270, 180, 570);
+
+
+  fill(20, 35, 45);
+
+  triangle(110, 450, 60, 360, 130, 420);
+  triangle(140, 430, 190, 330, 155, 470);
+  triangle(120, 370, 80, 290, 145, 350);
+  triangle(145, 330, 180, 250, 165, 390);
+
+  // SUELO
+ 
+  fill(25, 55, 65);
+  rect(0, 490, 800, 110);
+
+  stroke(60, 110, 100);
+  strokeWeight(6);
+
+  line(20, 520, 120, 510);
+  line(160, 550, 260, 530);
+  line(300, 515, 390, 535);
+  line(430, 550, 520, 520);
+  line(570, 530, 700, 550);
+  line(680, 510, 780, 530);
+
+  // TEXTO
+ 
+  fill(255);
+  noStroke();
+
+  textSize(22);
+  
+  text("Noche estrellada - van gogh", 280, 585);
+  textSize(11)
+  text("El diseño gráfico fundamenta la representación del arte abstracto al aplicar principios de composición que organizan el caos visual en un mensaje comprensible.", 0, 500);
+}
+    
