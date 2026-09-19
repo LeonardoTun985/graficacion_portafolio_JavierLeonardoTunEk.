@@ -18,31 +18,23 @@
 <body>
 
 
-    <!-- =========================
-         NAVEGACIÓN
-    ========================== -->
+    <!-- =========================================
+         BARRA DE NAVEGACIÓN
+    ========================================== -->
 
     <header class="header">
 
-        <div class="nav-container">
+        <div class="container nav-container">
 
             <a href="#inicio" class="logo">
 
-                <div class="logo-box">
+                <span class="logo-symbol">
                     JL
-                </div>
+                </span>
 
-                <div class="logo-text">
-
-                    <strong>
-                        Javier Leonardo
-                    </strong>
-
-                    <span>
-                        Portafolio académico
-                    </span>
-
-                </div>
+                <span class="logo-name">
+                    Javier Leonardo
+                </span>
 
             </a>
 
@@ -64,8 +56,9 @@
             </nav>
 
 
-            <a href="#actividades" class="nav-btn">
-                Explorar →
+            <a href="#actividades" class="nav-button">
+                Explorar
+                <span>→</span>
             </a>
 
         </div>
@@ -77,53 +70,58 @@
     <main>
 
 
-        <!-- =========================
-             INICIO
-        ========================== -->
+        <!-- =========================================
+             HERO
+        ========================================== -->
 
         <section id="inicio" class="hero">
 
-            <div class="hero-container">
+            <div class="container hero-grid">
 
 
                 <div class="hero-content">
 
+                    <div class="status">
 
-                    <div class="tag">
-
-                        <span></span>
+                        <span class="status-dot"></span>
 
                         PORTAFOLIO ACADÉMICO · 2026
 
                     </div>
 
 
+                    <p class="hero-label">
+                        INGENIERÍA EN SISTEMAS COMPUTACIONALES
+                    </p>
+
+
                     <h1>
 
-                        Mi portafolio de
+                        Hola, soy
 
-                        <em>
-                            Graficación
-                        </em>
+                        <span>
+                            Javier
+                        </span>
 
                     </h1>
 
 
-                    <p class="hero-description">
+                    <p class="hero-text">
 
-                        Un espacio donde presento mis
-                        actividades, prácticas y proyectos
-                        realizados durante la materia de
-                        Graficación.
+                        Este es mi portafolio de
+                        <strong>Graficación</strong>, donde
+                        presento diferentes actividades,
+                        prácticas y proyectos desarrollados
+                        durante el semestre.
 
                     </p>
 
 
-                    <div class="hero-actions">
+                    <div class="hero-buttons">
 
                         <a
                             href="#actividades"
-                            class="btn-primary">
+                            class="button primary">
 
                             Ver actividades
 
@@ -134,56 +132,54 @@
 
                         <a
                             href="#sobre-mi"
-                            class="btn-secondary">
+                            class="button secondary">
 
-                            Conocerme
+                            Sobre mí
 
                         </a>
 
                     </div>
 
 
-                    <div class="hero-stats">
+                    <div class="student-mini">
 
-
-                        <div class="stat">
-
-                            <strong>
-                                03
-                            </strong>
+                        <div>
 
                             <span>
-                                Semestre
+                                MATRÍCULA
                             </span>
+
+                            <strong>
+                                251K0052
+                            </strong>
 
                         </div>
 
 
-                        <div class="stat">
+                        <div>
+
+                            <span>
+                                SEMESTRE
+                            </span>
+
+                            <strong>
+                                3°
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                ACTIVIDADES
+                            </span>
 
                             <strong>
                                 04
                             </strong>
 
-                            <span>
-                                Actividades
-                            </span>
-
                         </div>
-
-
-                        <div class="stat">
-
-                            <strong>
-                                2026
-                            </strong>
-
-                            <span>
-                                Ciclo académico
-                            </span>
-
-                        </div>
-
 
                     </div>
 
@@ -191,40 +187,39 @@
 
 
 
-                <!-- ELEMENTO VISUAL -->
+                <!-- PANEL VISUAL -->
 
-                <div class="hero-card">
+                <div class="hero-panel">
 
-
-                    <div class="card-top">
+                    <div class="panel-header">
 
                         <span>
-                            PORTAFOLIO
+                            GRAFICACIÓN
                         </span>
 
                         <span>
-                            01 / 03
+                            01
                         </span>
 
                     </div>
 
 
-                    <div class="graphic">
+                    <div class="visual">
 
-                        <div class="graphic-circle"></div>
+                        <div class="visual-circle"></div>
 
-                        <div class="graphic-square"></div>
+                        <div class="visual-square"></div>
 
-                        <div class="graphic-line"></div>
+                        <div class="visual-cross"></div>
 
-                        <div class="graphic-dot dot-one"></div>
+                        <div class="visual-dot dot-a"></div>
 
-                        <div class="graphic-dot dot-two"></div>
+                        <div class="visual-dot dot-b"></div>
 
                     </div>
 
 
-                    <div class="card-bottom">
+                    <div class="panel-info">
 
                         <div>
 
@@ -238,7 +233,7 @@
 
                         </div>
 
-                        <span class="arrow">
+                        <span class="panel-arrow">
                             ↗
                         </span>
 
@@ -252,18 +247,16 @@
 
 
 
-        <!-- =========================
+        <!-- =========================================
              SOBRE MÍ
-        ========================== -->
+        ========================================== -->
 
-        <section
-            id="sobre-mi"
-            class="about section">
+        <section id="sobre-mi" class="about section">
 
             <div class="container">
 
 
-                <div class="section-heading">
+                <div class="section-title">
 
                     <span>
                         01
@@ -272,7 +265,7 @@
                     <div>
 
                         <small>
-                            PRESENTACIÓN
+                            INFORMACIÓN PERSONAL
                         </small>
 
                         <h2>
@@ -285,41 +278,43 @@
 
 
 
-                <div class="about-grid">
+                <div class="about-layout">
 
 
-                    <div class="about-main">
+                    <div class="about-description">
 
-                        <p class="big-text">
+                        <p class="about-highlight">
 
                             Soy estudiante de
                             <strong>
                                 Ingeniería en Sistemas
                                 Computacionales
                             </strong>
-                            y este sitio forma parte de mi
-                            portafolio académico.
+                            y actualmente curso el
+                            tercer semestre.
 
                         </p>
 
 
                         <p>
 
-                            Durante la materia de Graficación
-                            he trabajado con diferentes
-                            conceptos relacionados con la
-                            programación y la representación
+                            Este portafolio fue creado como
+                            parte de la materia de Graficación
+                            para presentar los trabajos y
+                            actividades realizadas durante
+                            el ciclo académico.
+
+                        </p>
+
+
+                        <p>
+
+                            A través de estas actividades he
+                            trabajado con programación,
+                            figuras geométricas, primitivas
+                            bidimensionales y diferentes
+                            herramientas de representación
                             gráfica.
-
-                        </p>
-
-
-                        <p>
-
-                            En este portafolio se encuentran
-                            algunas de las actividades y
-                            prácticas desarrolladas durante
-                            el semestre.
 
                         </p>
 
@@ -327,11 +322,11 @@
                         <div class="signature">
 
                             <span>
-                                Javier Leonardo
+                                Javier Leonardo Tun Ek
                             </span>
 
                             <small>
-                                Estudiante · Sistemas Computacionales
+                                Ingeniería en Sistemas Computacionales
                             </small>
 
                         </div>
@@ -340,23 +335,24 @@
 
 
 
-                    <div class="data-card">
+                    <!-- INFORMACIÓN -->
 
+                    <div class="information-card">
 
-                        <div class="data-card-header">
+                        <div class="information-title">
 
                             <span>
-                                INFORMACIÓN
+                                PERFIL
                             </span>
 
-                            <div class="mini-logo">
+                            <span class="profile-icon">
                                 JL
-                            </div>
+                            </span>
 
                         </div>
 
 
-                        <div class="data">
+                        <div class="information-row">
 
                             <span>
                                 Nombre
@@ -369,7 +365,7 @@
                         </div>
 
 
-                        <div class="data">
+                        <div class="information-row">
 
                             <span>
                                 Matrícula
@@ -382,7 +378,7 @@
                         </div>
 
 
-                        <div class="data">
+                        <div class="information-row">
 
                             <span>
                                 Carrera
@@ -396,7 +392,7 @@
                         </div>
 
 
-                        <div class="data">
+                        <div class="information-row">
 
                             <span>
                                 Semestre
@@ -408,7 +404,6 @@
 
                         </div>
 
-
                     </div>
 
                 </div>
@@ -419,9 +414,9 @@
 
 
 
-        <!-- =========================
+        <!-- =========================================
              ACTIVIDADES
-        ========================== -->
+        ========================================== -->
 
         <section
             id="actividades"
@@ -430,7 +425,7 @@
             <div class="container">
 
 
-                <div class="section-heading">
+                <div class="section-title">
 
                     <span>
                         02
@@ -439,11 +434,11 @@
                     <div>
 
                         <small>
-                            TRABAJOS REALIZADOS
+                            PROYECTOS ACADÉMICOS
                         </small>
 
                         <h2>
-                            Actividades
+                            Mis actividades
                         </h2>
 
                     </div>
@@ -451,31 +446,39 @@
                 </div>
 
 
-                <p class="activities-intro">
+                <p class="activities-description">
 
-                    Selecciona una actividad para consultar
-                    el trabajo correspondiente.
+                    Aquí puedes consultar las actividades
+                    realizadas durante la materia de
+                    Graficación.
 
                 </p>
 
 
 
-                <div class="activities-list">
+                <div class="activities-grid">
 
 
                     <!-- ACTIVIDAD 1 -->
 
-                    <article class="activity">
+                    <article class="project-card">
 
+                        <div class="project-top">
 
-                        <div class="activity-number">
-                            01
+                            <span class="project-number">
+                                01
+                            </span>
+
+                            <span class="project-type">
+                                P5.JS
+                            </span>
+
                         </div>
 
 
-                        <div class="activity-info">
+                        <div class="project-content">
 
-                            <span>
+                            <span class="project-label">
                                 ACTIVIDAD 1.1
                             </span>
 
@@ -495,12 +498,13 @@
 
                         <a
                             href="https://editor.p5js.org/LeonardoTun985/sketches/E7Q0Xtt3d"
-                            class="activity-btn">
+                            target="_blank"
+                            class="project-button">
 
-                            Ver
+                            Ver proyecto
 
                             <span>
-                                →
+                                ↗
                             </span>
 
                         </a>
@@ -511,17 +515,24 @@
 
                     <!-- ACTIVIDAD 2 -->
 
-                    <article class="activity">
+                    <article class="project-card">
 
+                        <div class="project-top">
 
-                        <div class="activity-number">
-                            02
+                            <span class="project-number">
+                                02
+                            </span>
+
+                            <span class="project-type">
+                                P5.JS
+                            </span>
+
                         </div>
 
 
-                        <div class="activity-info">
+                        <div class="project-content">
 
-                            <span>
+                            <span class="project-label">
                                 ACTIVIDAD 1.2
                             </span>
 
@@ -541,12 +552,13 @@
 
                         <a
                             href="https://editor.p5js.org/LeonardoTun985/sketches/tdv3dyJa2"
-                            class="activity-btn">
+                            target="_blank"
+                            class="project-button">
 
-                            Ver
+                            Ver proyecto
 
                             <span>
-                                →
+                                ↗
                             </span>
 
                         </a>
@@ -557,17 +569,24 @@
 
                     <!-- ACTIVIDAD 3 -->
 
-                    <article class="activity">
+                    <article class="project-card">
 
+                        <div class="project-top">
 
-                        <div class="activity-number">
-                            03
+                            <span class="project-number">
+                                03
+                            </span>
+
+                            <span class="project-type">
+                                P5.JS
+                            </span>
+
                         </div>
 
 
-                        <div class="activity-info">
+                        <div class="project-content">
 
-                            <span>
+                            <span class="project-label">
                                 ACTIVIDAD 1.3
                             </span>
 
@@ -587,12 +606,13 @@
 
                         <a
                             href="https://editor.p5js.org/LeonardoTun985/sketches/iv_24RsOo"
-                            class="activity-btn">
+                            target="_blank"
+                            class="project-button">
 
-                            Ver
+                            Ver proyecto
 
                             <span>
-                                →
+                                ↗
                             </span>
 
                         </a>
@@ -603,17 +623,24 @@
 
                     <!-- ACTIVIDAD 4 -->
 
-                    <article class="activity pdf">
+                    <article class="project-card featured">
 
+                        <div class="project-top">
 
-                        <div class="activity-number">
-                            04
+                            <span class="project-number">
+                                04
+                            </span>
+
+                            <span class="project-type">
+                                PDF
+                            </span>
+
                         </div>
 
 
-                        <div class="activity-info">
+                        <div class="project-content">
 
-                            <span>
+                            <span class="project-label">
                                 ACTIVIDAD 1.4
                             </span>
 
@@ -623,8 +650,9 @@
 
                             <p>
 
-                                Consulta el documento correspondiente
-                                a la actividad académica.
+                                Consulta el documento
+                                correspondiente a la
+                                actividad académica.
 
                             </p>
 
@@ -634,9 +662,9 @@
                         <a
                             href="ACTIVIDAD 1.4.pdf"
                             target="_blank"
-                            class="activity-btn">
+                            class="project-button">
 
-                            Abrir PDF
+                            Abrir documento
 
                             <span>
                                 ↗
@@ -654,64 +682,23 @@
         </section>
 
 
-           <article class="activity">
 
-
-                        <div class="activity-number">
-                            05
-                        </div>
-
-
-                        <div class="activity-info">
-
-                            <span>
-                                ACTIVIDAD 1.5
-                            </span>
-
-                            <h3>
-                                evaluacion
-                            </h3>
-
-                            <p>
-
-                                Modelado geométrico utilizando
-                                primitivas bidimensionales.
-
-                            </p>
-
-                        </div>
-
-
-                        <a
-                            href="#"
-                            class="activity-btn">
-
-                            Ver
-
-                            <span>
-                                →
-                            </span>
-
-                        </a>
-
-                    </article>
-
-
-
-
-
-        <!-- =========================
+        <!-- =========================================
              CIERRE
-        ========================== -->
+        ========================================== -->
 
         <section class="closing">
 
             <div class="container">
 
-                <div class="closing-box">
+                <div class="closing-card">
+
+                    <div class="closing-number">
+                        03
+                    </div>
 
 
-                    <div>
+                    <div class="closing-content">
 
                         <span>
                             PORTAFOLIO DE GRAFICACIÓN
@@ -728,16 +715,11 @@
                     </div>
 
 
-                    <a href="#inicio">
+                    <a href="#inicio" class="back-top">
 
-                        Volver arriba
-
-                        <span>
-                            ↑
-                        </span>
+                        ↑
 
                     </a>
-
 
                 </div>
 
@@ -750,31 +732,26 @@
 
 
 
-    <!-- =========================
+    <!-- =========================================
          FOOTER
-    ========================== -->
+    ========================================== -->
 
     <footer>
 
-        <div class="container">
+        <div class="container footer-container">
 
-            <div class="footer-content">
 
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    JL
+                </div>
 
                 <div>
 
-                    <div class="footer-logo">
-
-                        <span>
-                            JL
-                        </span>
-
-                        <strong>
-                            Javier Leonardo
-                        </strong>
-
-                    </div>
-
+                    <strong>
+                        Javier Leonardo
+                    </strong>
 
                     <p>
                         Portafolio académico de Graficación.
@@ -782,31 +759,21 @@
 
                 </div>
 
-
-
-                <div class="footer-info">
-
-                    <span>
-                        Ingeniería en Sistemas Computacionales
-                    </span>
-
-                    <span>
-                        Matrícula: 251K0052
-                    </span>
-
-                </div>
-
             </div>
 
 
-            <div class="footer-bottom">
+            <div class="footer-data">
 
                 <span>
-                    © 2026 Javier Leonardo Tun Ek
+                    Ingeniería en Sistemas Computacionales
                 </span>
 
                 <span>
-                    Materia de Graficación
+                    Matrícula: 251K0052
+                </span>
+
+                <span>
+                    © 2026
                 </span>
 
             </div>
@@ -819,4 +786,3 @@
 </body>
 
 </html>
-
