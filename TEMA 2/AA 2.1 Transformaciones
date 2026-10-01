@@ -1,0 +1,61 @@
+function setup() {
+  createCanvas(920, 740);
+}
+function draw() {
+  background(20);
+
+  push();
+  translate(50, 150);
+  fill(255, 220, 150);
+  scale(0.5);
+  rotate(-0.1);
+  drawPerro(1);
+  pop();
+
+  push();
+  translate(150, 250);
+  fill(240, 200, 130);
+  scale(0.7);
+  rotate(0.1);
+  drawPerro(2);
+  pop();
+
+  push();
+  translate(250, 340);
+  fill(220, 180, 110);
+  scale(0.9);
+  rotate(-0.1);
+  drawPerro(3);
+  pop();
+
+  push();
+  translate(400, 430);
+  fill(200, 160, 90);
+  scale(1.1);
+  rotate(0.1);
+  drawPerro(4);
+  pop();
+
+  push();
+  translate(600, 550);
+  fill(180, 140, 70);
+  scale(1.3);
+  rotate(-0.1);
+  drawPerro(5);
+  pop();
+}
+function drawPerro(etapa) {
+  ellipse(0, 0, 70, 60);
+
+  ellipse(-35, -10, 25, 45);
+  ellipse(35, -10, 25, 45);
+
+  fill(0);
+  ellipse(-15, -8, 8, 8);
+  ellipse(15, -8, 8, 8);
+
+  ellipse(0, 8, 12, 10);
+
+  line(0, 13, -8, 20);
+  line(0, 13, 8, 20);
+}
