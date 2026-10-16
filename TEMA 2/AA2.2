@@ -1,0 +1,748 @@
+let flores = [];
+let calaveritaSaluda = false;
+let luzActiva = true;
+
+const ESCENA_W = 900;
+const ESCENA_H = 650;
+
+let velas = [
+  { x: 185, y: 455, tam: 0.8, encendida: true },
+  { x: 715, y: 455, tam: 0.8, encendida: true },
+  { x: 450, y: 340, tam: 0.65, encendida: true }
+];
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  angleMode(RADIANS);
+  textFont("monospace");
+
+  for (let i = 0; i < 18; i++) {
+    flores.push({
+      x: random(ESCENA_W),
+      y: random(80, 580),
+      tam: random(0.5, 1),
+      velocidad: random(0.4, 1.2),
+      giro: random(TWO_PI)
+    });
+  }
+}
+
+function draw() {
+  background(0, 0, 0);
+
+  // ESCENARIO RESPONSIVO
+  let escala = min(width / ESCENA_W, height / ESCENA_H);
+  let offsetX = (width - ESCENA_W * escala) / 2;
+  let offsetY = (height - ESCENA_H * escala) / 2;
+
+  push();
+  translate(offsetX, offsetY);
+  scale(escala);
+
+  dibujarEstrellas();
+  dibujarPapelPicado();
+  dibujarPared();
+  dibujarAltar();
+  dibujarFloresFlotantes();
+
+  for (let v of velas) {
+    dibujarVeladora(v);
+  }
+
+  dibujarMonitor(330, 275);
+  dibujarServidor(565, 300);
+
+  // CALAVERITA 1: ROTACIÓN LOCAL
+  push();
+  translate(245, 375 + sin(frameCount * 0.05) * 4);
+  rotate(sin(frameCount * 0.035) * 0.08);
+  dibujarCalaveritaLocal(0, 0, 0);
+  pop();
+
+  // CALAVERITA 2: MOVIMIENTO Y SALUDO
+  push();
+  translate(655, 375 + sin(frameCount * 0.05 + 1) * 4);
+  rotate(
+    calaveritaSaluda
+      ? sin(frameCount * 0.12) * 0.12
+      : sin(frameCount * 0.035 + 1) * 0.06
+  );
+  dibujarCalaveritaLocal(0, 0, 1);
+  pop();
+
+  dibujarMicrochip(450, 525);
+
+  if (luzActiva) {
+    dibujarLuzInteractiva(offsetX, offsetY, escala);
+  }
+
+  dibujarTexto();
+
+  pop();
+}
+
+// INTERACTIVIDAD DEL MOUSE
+function mousePressed() {
+  let escala = min(width / ESCENA_W, height / ESCENA_H);
+  let offsetX = (width - ESCENA_W * escala) / 2;
+  let offsetY = (height - ESCENA_H * escala) / 2;
+
+  let mx = (mouseX - offsetX) / escala;
+  let my = (mouseY - offsetY) / escala;
+
+  for (let v of velas) {
+    let ancho = 42 * v.tam;
+    let izquierda = v.x - ancho;
+    let derecha = v.x + ancho;
+    let arriba = v.y - 35 * v.tam;
+    let abajo = v.y + 45 * v.tam;
+
+    if (
+      mx >= izquierda &&
+      mx <= derecha &&
+      my >= arriba &&
+      my <= abajo
+    ) {
+      v.encendida = !v.encendida;
+      return false;
+    }
+  }
+
+  calaveritaSaluda = !calaveritaSaluda;
+  luzActiva = !luzActiva;
+
+  return false;
+}
+
+// ADAPTACIÓN AL CAMBIAR EL TAMAÑO DE LA VENTANA
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+// ESTRELLAS
+function dibujarEstrellas() {
+  noStroke();
+
+  for (let i = 0; i < 55; i++) {
+    let x = (i * 137 + 35) % ESCENA_W;
+    let y = (i * 71 + 20) % 220;
+
+    fill(255, 210, 120, 140);
+    circle(
+      x,
+      y,
+      2 + sin(frameCount * 0.04 + i) * 1.2
+    );
+  }
+}
+
+// PAPEL PICADO ANIMADO
+function dibujarPapelPicado() {
+  let colores = [
+    color(240, 65, 100),
+    color(40, 190, 160),
+    color(255, 180, 40),
+    color(150, 90, 220)
+  ];
+  stroke(220, 180, 120);
+  strokeWeight(2);
+  line(0, 35, ESCENA_W, 35);
+
+  for (let i = 0; i < 9; i++) 
+  {
+    let x = 15 + i * 105;
+
+  push();
+  //no se como se llaman las cosas de arriba 
+    translate(x, 37);
+    rotate(sin(frameCount * 0.025 + i) * 0.08);
+
+    noStroke();
+    fill(colores[i % colores.length]);
+    rect(0, 0, 75, 98);
+
+    fill(255, 230, 180);
+    circle(37, 22, 12);
+    circle(15, 12, 5);
+    circle(60, 12, 5);
+    triangle(28, 47, 38, 35, 48, 47);
+
+    pop();
+  }
+}
+
+// importante 
+function dibujarPared() {
+  noStroke();
+  fill(20, 20, 20);
+  rect(50, 220, 800,300);
+
+  for (let x of [45, 855]) {
+    fill(91, 52, 55);
+    rect(x - 12, 220, 24, 300);
+
+    fill(255, 150, 40);
+    rect(x - 16, 220, 32, 7);
+  }
+
+  fill(35, 25, 43);
+  rect(0, 585, ESCENA_W, 65);
+
+  stroke(100, 65, 70);
+  strokeWeight(1);
+
+  for (let x = 0; x < ESCENA_W; x += 45) {
+    line(x, 585, x - 20, 650);
+  }
+
+  noStroke();
+}
+
+// Altar, Decoracion 
+function dibujarAltar() {
+  noStroke();
+
+  
+  fill(105, 48, 43);
+  rect(95, 500, 710, 85);
+
+  fill(225, 139, 51);
+  rect(95, 500, 710, 8);
+
+
+  fill(130, 60, 46);
+  rect(145, 420, 610, 80);
+
+  fill(255, 178, 55);
+  rect(145, 420, 610, 7);
+
+  
+  fill(105, 48, 43);
+  rect(205, 350, 490, 70);
+
+  fill(255, 190, 70);
+  rect(205, 350, 490, 7);
+
+  // Bordes del mantel
+  fill(245, 205, 160);
+  rect(95, 510, 710, 5);
+  rect(145, 430, 610, 4);
+   rect(205, 360,490, 4);
+
+  // Flores 
+  for (let x = 110; x < 800; x += 38) {
+    flor(x, 496, 0.48, frameCount * 0.01);
+    flor(x, 416, 0.38, -frameCount * 0.01);
+  }
+
+  // Marco conmemorativo
+  fill(45, 32, 45);
+  rect(390, 365, 120, 45);
+
+  stroke(255, 180, 70);
+  strokeWeight(3);
+  noFill();
+  rect(390, 365, 120, 45);
+
+  noStroke();
+  fill(255, 220, 160);
+  textAlign(CENTER, CENTER);
+  textSize(10);
+  text("EN MEMORIA", 450, 378);
+  text("DE QUIENES", 450, 390);
+  text("NOS INSPIRAN", 450, 401);
+
+  // Mantel frontal decorado
+  fill(245, 220, 175);
+  rect(105, 550, 690, 28);
+
+  stroke(190, 45, 80);
+  strokeWeight(3);
+  line(105, 550, 795, 550);
+  line(105, 578, 795, 578);
+  
+stroke(190, 45, 80);
+  strokeWeight(3);
+  line(165, 450, 735, 450);
+  line(165, 480, 735, 480);
+  fill(245, 220, 175);
+  rect(165, 450, 580, 28);
+
+  // Bordado geométrico
+  for (let x = 115; x < 790; x += 28) {
+    noStroke();
+
+    fill(210, 55, 90);
+    triangle(x, 555, x + 10, 565, x + 20, 555);
+
+    fill(40, 145, 105);
+    circle(x + 10, 570, 5);
+    }
+    for (let x = 175; x < 730; x += 28) {
+    noStroke();
+    fill(210, 55, 90);
+    triangle(x, 455, x + 10, 465, x + 20, 455);
+
+    fill(40, 145, 105);
+    circle(x + 10, 470, 5);
+    
+  }
+
+  // Panes y frutas
+  dibujarPanMuerto(275, 557);
+  dibujarPanMuerto(625, 557);
+  dibujarFrutero(365, 558);
+  dibujarFrutero(535, 558);
+}
+
+// Flor de cepasuchil?
+function flor(x, y, tam, angulo) {
+  push();
+  translate(x, y);
+  rotate(angulo);
+  scale(tam);
+
+  noStroke();
+
+  for (let i = 0; i < 12; i++) {
+    push();
+    rotate(TWO_PI * i / 12);
+
+    fill(255, 130 + (i % 3) * 25, 15);
+    ellipse(0, -13, 10, 21);
+
+    pop();
+  }
+
+  fill(120, 60, 15);
+  circle(0, 0, 12);
+
+  pop();
+}
+
+// flowers flying jiji
+function dibujarFloresFlotantes() {
+  for (let f of flores) {
+    f.y -= f.velocidad * 0.35;
+
+    if (f.y < 55) {
+      f.y = ESCENA_H - 20;
+      f.x = random(ESCENA_W);
+    }
+
+    f.giro += 0.015;
+
+    flor(
+      f.x + sin(frameCount * 0.02 + f.x) * 12,
+      f.y,
+      f.tam,
+      f.giro
+    );
+  }
+}
+
+// Velas
+function dibujarVeladora(v) {
+  push();
+  translate(v.x, v.y);
+  scale(v.tam);
+
+  if (v.encendida) {
+    noStroke();
+
+    for (let r = 65; r > 5; r -= 10) {
+      fill(255, 130, 25, map(r, 65, 5, 4, 22));
+      circle(0, -13, r);
+    }
+  }
+
+  // Vaso
+  noStroke();
+  fill(235, 210, 175);
+  rect(-15, 0, 30, 38, 4);
+
+  fill(255, 238, 190);
+  rect(-10, 5, 20, 28, 3);
+
+
+  fill(255, 255, 45);
+  rect(-19, 35, 38, 6, 2);
+
+  if (v.encendida) {
+    push();
+
+    translate(0, -10);
+
+    let pulso = 1 + sin(frameCount * 0.2 + v.x) * 0.13;
+    scale(
+      pulso,
+      1 + sin(frameCount * 0.27 + v.x) * 0.2
+    );
+
+    noStroke();
+
+    fill(255, 90, 10, 70);
+    ellipse(0, -5, 42, 55);
+
+    fill(255, 120, 15);
+    ellipse(0, -5, 19, 32);
+
+    fill(255, 225, 90);
+    ellipse(0, -3, 9, 19);
+
+    pop();
+  } else {
+    noFill();
+    stroke(175, 175, 190, 100);
+    strokeWeight(1.5);
+
+    let humo = sin(frameCount * 0.04 + v.x) * 3;
+    arc(humo, -9, 8, 13, PI, TWO_PI);
+  }
+
+  pop();
+}
+
+// MONITOR CON CÓDIGO
+function dibujarMonitor(x, y) {
+  push();
+  translate(x, y);
+
+  fill(12, 22, 32);
+  stroke(70, 200, 180);
+  strokeWeight(3);
+  rect(-65, -45, 130, 80, 5);
+
+  noStroke();
+  fill(40, 75, 85);
+  rect(-57, -37, 114, 64);
+
+  textAlign(LEFT, TOP);
+  textSize(8);
+
+  let lineas = [
+    "class Memoria {",
+    "  void honrar() {",
+    "    ofrenda();",
+    "    recordar();",
+    "  }",
+    "}"
+  ];
+
+  for (let i = 0; i < lineas.length; i++) {
+    fill(
+      i % 2 === 0
+        ? color(80, 255, 170)
+        : color(255, 190, 100)
+    );
+
+    text(lineas[i], -50, -30 + i * 10);
+  }
+
+  fill(90, 100, 110);
+  rect(-8, 35, 16, 14);
+  rect(-28, 48, 56, 6);
+
+  pop();
+}
+
+// Gabinete de Servidores 
+function dibujarServidor(x, y) {
+  push();
+  translate(x, y);
+
+  fill(35, 42, 53);
+  stroke(120, 130, 150);
+  strokeWeight(2);
+  rect(-38, -45, 76, 105, 4);
+
+  for (let i = 0; i < 4; i++) {
+    let yy = -35 + i * 23;
+
+    noStroke();
+    fill(60, 75, 88);
+    rect(-30, yy, 60, 17, 2);
+
+    for (let j = 0; j < 4; j++) {
+      fill(
+        j % 2 === 0
+          ? color(50, 255, 150)
+          : color(70, 180, 255)
+      );
+
+      circle(-22 + j * 12, yy + 8, 4);
+    }
+
+    stroke(130, 150, 165);
+
+    for (let j = 0; j < 4; j++) {
+      line(12 + j * 4, yy + 4, 12 + j * 4, yy + 13);
+    }
+  }
+
+  pop();
+}
+
+// Calaveras Con Hipil
+function dibujarCalaveritaLocal(x, y, estilo) {
+  push();
+  translate(x, y);
+
+  // Cabeza
+  noStroke();
+  fill(235, 220, 190);
+  ellipse(0, 0, 39, 36);
+
+  // Cabello
+  fill(65, 35, 35);
+  arc(0, -9, 41, 24, PI, TWO_PI);
+
+  // Flores del cabello
+  flor(-13, -15, 0.25, frameCount );
+  flor(12, -15, 0.25, -frameCount );
+
+  // Ojos
+  noStroke();
+  fill(55, 30, 40);
+  ellipse(-9, -3, 10, 13);
+  ellipse(9, -3, 10, 13);
+
+  fill(255, 170, 80);
+  circle(-9, -3, 3);
+  circle(9, -3, 3);
+
+  fill(70, 35, 40);
+  triangle(-3, 5, 3, 5, 0, 10);
+
+  stroke(70, 35, 40);
+  strokeWeight(2);
+  line(-9, 12, 9, 12);
+
+  for (let i = -5; i <= 5; i += 5) {
+    line(i, 10, i, 14);
+  }
+
+  // Hipil
+  noStroke();
+  fill(245, 235, 210);
+
+  beginShape();
+  vertex(-12, 18);
+  vertex(-17, 25);
+  vertex(-25, 54);
+  vertex(25, 54);
+  vertex(17, 25);
+  vertex(12, 18);
+  endShape(CLOSE);
+
+  // Cuello
+  fill(255, 248, 225);
+  ellipse(0, 22, 23, 12);
+
+  // Bordado del cuello
+  noFill();
+  strokeWeight(2);
+
+  let coloresBordado = [
+    color(220, 45, 85),
+    color(255, 150, 35),
+    color(45, 160, 115),
+    color(140, 75, 190)
+  ];
+
+  for (let i = 0; i < 4; i++) {
+    stroke(coloresBordado[(i + estilo) % coloresBordado.length]);
+    arc(0, 22, 12 + i * 4, 7 + i * 2, 0, PI);
+  }
+
+  // Flores bordadas
+  noStroke();
+
+  for (let i = 0; i < 3; i++) {
+    let fx = (i - 1) * 12;
+    let fy = 34 + (i % 2) * 9;
+
+    flor(fx, fy, 0.24, i * 0.5);
+  }
+
+  // Borde inferior
+  stroke(210, 65, 100);
+  strokeWeight(2);
+  line(-23, 51, 23, 51);
+
+  stroke(255, 165, 45);
+  line(-20, 55, 20, 55);
+
+  // Brazo que saluda
+  push();
+  translate(12, 24);
+  rotate(sin(frameCount * 0.12 + x) * 0.7 - 0.8);
+
+  stroke(235, 220, 190);
+  strokeWeight(7);
+  line(0, 0, 20, -3);
+
+  noStroke();
+  fill(235, 220, 190);
+  circle(22, -3, 9);
+
+  pop();
+
+
+  stroke(235, 220, 190);
+  strokeWeight(6);
+  line(-12, 25, -20, 37);
+
+ 
+  noStroke();
+  fill(235, 220, 190);
+  ellipse(-8, 57, 12, 6);
+  ellipse(8, 57, 12, 6);
+
+  pop();
+}
+
+function dibujarMicrochip(x, y) {
+  push();
+  translate(x, y);
+  rotate(sin(frameCount * 0.025) * 0.04);
+
+  stroke(70, 220, 190);
+  strokeWeight(3);
+
+  for (let i = -2; i <= 2; i++) {
+    line(-25, i * 9, -38, i * 9);
+    line(25, i * 9, 38, i * 9);
+    line(i * 9, -25, i * 9, -38);
+    line(i * 9, 25, i * 9, 38);
+  }
+
+  stroke(255, 190, 70);
+  strokeWeight(3);
+  fill(30, 45, 55);
+  rect(-25, -25, 50, 50, 5);
+
+  noStroke();
+  fill(80, 255, 190);
+  textAlign(CENTER, CENTER);
+  textSize(11);
+  text("ISC", 0, -4);
+
+  textSize(7);
+  text("0101", 0, 9);
+
+  pop();
+}
+
+function dibujarLuzInteractiva(offsetX, offsetY, escala) {
+  let mx = (mouseX - offsetX) / escala;
+  let my = (mouseY - offsetY) / escala;
+
+  noStroke();
+
+  for (let r = 180; r > 0; r -= 12) {
+    fill(255, 153, 0, map(r, 180, 0, 2, 12));
+    ellipse(mx, my, r * 2);
+  }
+}
+
+
+function dibujarTexto() {
+  textAlign(CENTER, CENTER);
+  noStroke();
+
+  fill(255, 190, 75);
+  textSize(25);
+  text(
+    "ALTAR DIGITAL DE FINADOS (JANAL PIXÁN)",
+    ESCENA_W / 2,
+    10
+  );
+
+  fill(255, 220, 180);
+  textSize(13);
+  text(
+    "TRADICIÓN • MEMORIA • TECNOLOGÍA",
+    ESCENA_W / 2,
+    105
+  );
+
+  fill(110, 255, 200);
+  textSize(12);
+  text(
+    "INGENIERÍA EN SISTEMAS COMPUTACIONALES (ISC)",
+    ESCENA_W / 2,
+    135
+  );
+
+  fill(255, 210, 150);
+  textSize(10);
+  text(
+    "INSTITUTO TECNOLÓGICO",
+    ESCENA_W / 2,
+    165
+  );
+
+  fill(255, 220, 150);
+  textSize(11);
+  text(
+    "HAZ CLIC SOBRE UNA VELA PARA PRENDERLA O APAGARLA",
+    ESCENA_W / 2,
+    620
+  
+
+    
+  );
+  
+  fill(255, 220, 150);
+  textSize(11);
+  text(
+    "HAZ CLIC PARA APAGAR Y PRENDER EL COLOR DEL CURSOR",
+    ESCENA_W / 2,
+    640
+  
+  );
+  
+}
+
+function dibujarPanMuerto(x, y) {
+  push();
+  translate(x, y);
+
+  noStroke();
+  fill(190, 105, 48);
+  ellipse(0, 0, 42, 23);
+
+  fill(245, 195, 120);
+  ellipse(0, -3, 36, 18);
+
+  stroke(245, 215, 165);
+  strokeWeight(4);
+  line(-10, -3, 10, -3);
+  line(0, -9, 0, 5);
+
+  pop();
+}
+
+function dibujarFrutero(x, y) {
+  push();
+  translate(x, y);
+
+  noStroke();
+  fill(225, 185, 130);
+  ellipse(0, 5, 48, 12);
+
+  fill(210, 40, 50);
+  circle(-12, -4, 13);
+  circle(0, -8, 14);
+  circle(12, -4, 13);
+
+  fill(255, 155, 30);
+  circle(-6, 0, 11);
+  circle(7, 0, 11);
+
+  fill(50, 145, 60);
+  ellipse(0, -16, 6, 11);
+
+  pop();
+}
